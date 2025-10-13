@@ -1,7 +1,6 @@
 'use client'
 
 import { format } from 'date-fns'
-import { useState } from 'react'
 
 interface PostHeaderProps {
   title: string
@@ -78,7 +77,6 @@ const categoryData: { [key: string]: { name: string; icon: string; images: strin
 
 export default function PostHeader({ title, date, readTime, author, image, category }: PostHeaderProps) {
   const data = categoryData[category] || categoryData['iphone']
-  const [imageError, setImageError] = useState(false)
   
   // Get a random image from the category
   const randomImage = data.images[Math.floor(Math.random() * data.images.length)]
@@ -87,14 +85,11 @@ export default function PostHeader({ title, date, readTime, author, image, categ
   return (
     <div className="relative w-full h-96 bg-gray-900 mb-12 overflow-hidden">
       {/* Real Photo Background */}
-      {!imageError && (
-        <img
-          src={finalImage}
-          alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={() => setImageError(true)}
-        />
-      )}
+      <img
+        src={finalImage}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       
       {/* Dark Gradient Overlay for Text Readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
