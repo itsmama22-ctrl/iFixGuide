@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/posts'
 import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo'
+import { getImageForPost } from '@/lib/images'
 import RelatedPosts from '@/components/RelatedPosts'
 import { remark } from 'remark'
 import html from 'remark-html'
@@ -35,18 +36,8 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
     notFound()
   }
 
-  // Get category-specific image from Pexels
-  const getCategoryImage = () => {
-    const iPhoneImages = [
-      'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1200',
-      'https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=1200'
-    ]
-    const index = Math.abs(post.slug.split('').reduce((a, b) => a + b.charCodeAt(0), 0)) % iPhoneImages.length
-    return iPhoneImages[index]
-  }
+  // Get category-specific image
+  const postImage = getImageForPost(post.category, post.slug)
 
   // Convert markdown to HTML
   const processedContent = await remark()
@@ -64,7 +55,7 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
     publishedTime: post.date,
     modifiedTime: post.date,
     author: post.author,
-    image: getCategoryImage(),
+    image: postImage,
     url: `/troubleshooting/iphone/${params.slug}`,
   })
 
@@ -96,7 +87,7 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
           {/* 2. HTML PICTURE */}
           <div className="mb-8">
             <img
-              src={getCategoryImage()}
+              src={postImage}
               alt={post.title}
               className="w-full h-auto rounded-2xl shadow-lg"
               loading="eager"

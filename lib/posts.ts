@@ -1,17 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-
-// Load image mapping
-const imageMappingPath = path.join(process.cwd(), 'public/image-mapping.json')
-let imageMapping: { [key: string]: string } = {}
-
-try {
-  const mappingContent = fs.readFileSync(imageMappingPath, 'utf8')
-  imageMapping = JSON.parse(mappingContent)
-} catch (error) {
-  console.warn('Image mapping not found, using fallback images')
-}
+import { getImageForPost } from './images'
 
 export interface Post {
   slug: string
@@ -58,7 +48,7 @@ export function getAllPosts(): Post[] {
           publishDate: data.publishDate || data.date,
           category,
           keywords: data.keywords || [],
-          image: data.image || imageMapping[`${category}/${slug}`] || `/images/${category}/${slug}.jpg`,
+          image: data.image || getImageForPost(category, slug),
           content,
           readTime: Math.ceil(content.split(/\s+/).length / 200), // Approximate reading time
           author: data.author || 'iFixGuide Team',
@@ -104,7 +94,7 @@ export function getPostBySlug(category: string, slug: string): Post | null {
     publishDate: data.publishDate || data.date,
     category,
     keywords: data.keywords || [],
-    image: data.image || imageMapping[`${category}/${slug}`] || `/images/${category}/${slug}.jpg`,
+    image: data.image || getImageForPost(category, slug),
     content,
     readTime: Math.ceil(content.split(/\s+/).length / 200),
     author: data.author || 'iFixGuide Team',
