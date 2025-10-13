@@ -3,9 +3,9 @@ import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/utils/posts'
 import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/utils/seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import RelatedPosts from '@/components/RelatedPosts'
+import PostHeader from '@/components/PostHeader'
 import { remark } from 'remark'
 import html from 'remark-html'
-import { format } from 'date-fns'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -76,8 +76,17 @@ export default async function Post({ params }: { params: { slug: string } }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <article className="bg-white py-12">
-        <div className="container-custom max-w-4xl">
+      <article className="bg-white">
+        <PostHeader
+          title={post.title}
+          date={post.date}
+          readTime={post.readTime}
+          author={post.author}
+          image={post.image}
+          category="iphone"
+        />
+
+        <div className="container-custom max-w-4xl py-12">
           <Breadcrumbs 
             items={[
               { name: 'Troubleshooting', href: '/troubleshooting' },
@@ -86,23 +95,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
             ]} 
           />
 
-          <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {post.title}
-            </h1>
-            <div className="flex flex-wrap items-center gap-4 text-gray-600">
-              <time dateTime={post.date}>
-                {format(new Date(post.date), 'MMMM dd, yyyy')}
-              </time>
-              <span>•</span>
-              <span>{post.readTime} min read</span>
-              <span>•</span>
-              <span>By {post.author}</span>
-            </div>
-          </header>
-
           <div 
-            className="prose-custom"
+            className="prose-custom mt-8"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </div>

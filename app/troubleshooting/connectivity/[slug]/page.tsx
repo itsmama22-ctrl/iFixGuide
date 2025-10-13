@@ -3,21 +3,23 @@ import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/utils/posts'
 import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/utils/seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import RelatedPosts from '@/components/RelatedPosts'
+import PostHeader from '@/components/PostHeader'
 import { remark } from 'remark'
 import html from 'remark-html'
-import { format } from 'date-fns'
+
+const CATEGORY = 'connectivity'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
-  const connectivityPosts = posts.filter(post => post.category === 'connectivity')
+  const categoryPosts = posts.filter(post => post.category === CATEGORY)
   
-  return connectivityPosts.map((post) => ({
+  return categoryPosts.map((post) => ({
     slug: post.slug,
   }))
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug('connectivity', params.slug)
+  const post = getPostBySlug(CATEGORY, params.slug)
   
   if (!post) {
     return {}
@@ -26,7 +28,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return generateSEO({
     title: post.title,
     description: post.description,
-    url: `/troubleshooting/connectivity/${params.slug}`,
+    url: `/troubleshooting/${CATEGORY}/${params.slug}`,
     type: 'article',
     publishedTime: post.date,
     keywords: post.keywords,
@@ -36,7 +38,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function Post({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug('connectivity', params.slug)
+  const post = getPostBySlug(CATEGORY, params.slug)
 
   if (!post) {
     notFound()
@@ -53,7 +55,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
     title: post.title,
     description: post.description,
     image: post.image,
-    url: `/troubleshooting/connectivity/${params.slug}`,
+    url: `/troubleshooting/${CATEGORY}/${params.slug}`,
     publishedTime: post.date,
     author: post.author,
   })
@@ -61,8 +63,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Troubleshooting', url: '/troubleshooting' },
-    { name: 'Connectivity', url: '/troubleshooting/connectivity' },
-    { name: post.title, url: `/troubleshooting/connectivity/${params.slug}` },
+    { name: 'Connectivity', url: `/troubleshooting/${CATEGORY}` },
+    { name: post.title, url: `/troubleshooting/${CATEGORY}/${params.slug}` },
   ])
 
   return (
@@ -76,33 +78,27 @@ export default async function Post({ params }: { params: { slug: string } }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <article className="bg-white py-12">
-        <div className="container-custom max-w-4xl">
+      <article className="bg-white">
+        <PostHeader
+          title={post.title}
+          date={post.date}
+          readTime={post.readTime}
+          author={post.author}
+          image={post.image}
+          category={CATEGORY}
+        />
+
+        <div className="container-custom max-w-4xl py-12">
           <Breadcrumbs 
             items={[
               { name: 'Troubleshooting', href: '/troubleshooting' },
-              { name: 'Connectivity', href: '/troubleshooting/connectivity' },
-              { name: post.title, href: `/troubleshooting/connectivity/${params.slug}` }
+              { name: 'Connectivity', href: `/troubleshooting/${CATEGORY}` },
+              { name: post.title, href: `/troubleshooting/${CATEGORY}/${params.slug}` }
             ]} 
           />
 
-          <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {post.title}
-            </h1>
-            <div className="flex flex-wrap items-center gap-4 text-gray-600">
-              <time dateTime={post.date}>
-                {format(new Date(post.date), 'MMMM dd, yyyy')}
-              </time>
-              <span>•</span>
-              <span>{post.readTime} min read</span>
-              <span>•</span>
-              <span>By {post.author}</span>
-            </div>
-          </header>
-
           <div 
-            className="prose-custom"
+            className="prose-custom mt-8"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </div>
@@ -112,4 +108,3 @@ export default async function Post({ params }: { params: { slug: string } }) {
     </>
   )
 }
-
