@@ -97,13 +97,6 @@ export default function GuideCard({
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
           
-          {/* Category Icon Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
-            <div className="text-6xl opacity-40 filter drop-shadow-lg">
-              {categoryIcons[category]}
-            </div>
-          </div>
-          
           {/* Category Badge */}
           <div className="absolute top-4 left-4 z-30">
             <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-900 shadow-xl">
