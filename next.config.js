@@ -17,6 +17,7 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: true, // Disable image optimization to fix loading issues
   },
   compress: true,
   poweredByHeader: false,

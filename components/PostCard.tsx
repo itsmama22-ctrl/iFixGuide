@@ -44,6 +44,7 @@ export default function PostCard({
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              unoptimized={true}
               onError={() => {
                 console.log('Image failed to load:', image)
                 setImageError(true)
@@ -51,21 +52,36 @@ export default function PostCard({
               onLoad={() => console.log('Image loaded successfully:', image)}
             />
           ) : (
-            <div className="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700"></div>
-          )}
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <div className="text-white text-center p-4">
-              <div className="text-4xl mb-2">
-                {category === 'iphone' && '📱'}
-                {category === 'battery' && '🔋'}
-                {category === 'connectivity' && '📡'}
-                {category === 'camera' && '📷'}
-                {category === 'app-issues' && '📲'}
-                {category === 'ios-updates' && '⚙️'}
+            <div className="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+              <div className="text-white text-center">
+                <div className="text-4xl mb-2">
+                  {category === 'iphone' && '📱'}
+                  {category === 'battery' && '🔋'}
+                  {category === 'connectivity' && '📡'}
+                  {category === 'camera' && '📷'}
+                  {category === 'app-issues' && '📲'}
+                  {category === 'ios-updates' && '⚙️'}
+                </div>
+                <div className="text-sm font-medium opacity-90">{categoryNames[category] || category}</div>
               </div>
-              <div className="text-sm font-medium opacity-90 bg-black/50 px-2 py-1 rounded">{categoryNames[category] || category}</div>
             </div>
-          </div>
+          )}
+          {/* Category overlay - only show if image is loaded */}
+          {!imageError && image && image.startsWith('http') && (
+            <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+              <div className="text-white text-center p-4">
+                <div className="text-4xl mb-2">
+                  {category === 'iphone' && '📱'}
+                  {category === 'battery' && '🔋'}
+                  {category === 'connectivity' && '📡'}
+                  {category === 'camera' && '📷'}
+                  {category === 'app-issues' && '📲'}
+                  {category === 'ios-updates' && '⚙️'}
+                </div>
+                <div className="text-sm font-medium opacity-90 bg-black/50 px-2 py-1 rounded">{categoryNames[category] || category}</div>
+              </div>
+            </div>
+          )}
         </div>
       </Link>
       
