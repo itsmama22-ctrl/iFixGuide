@@ -1,4 +1,4 @@
-import { generateSEO } from '@/utils/seo'
+import { generateSEO } from '@/lib/seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata = generateSEO({

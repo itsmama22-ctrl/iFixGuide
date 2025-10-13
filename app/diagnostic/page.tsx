@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/utils/posts'
+import { getAllPosts } from '@/lib/posts'
 
 export default function DiagnosticPage() {
   const posts = getAllPosts()

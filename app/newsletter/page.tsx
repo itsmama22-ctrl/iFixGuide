@@ -2,9 +2,9 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { generateSEO } from '@/utils/seo'
+import { generateSEO } from '@/lib/seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { trackNewsletterSignup } from '@/utils/analytics'
+import { trackNewsletterSignup } from '@/lib/analytics'
 
 interface NewsletterFormData {
   email: string

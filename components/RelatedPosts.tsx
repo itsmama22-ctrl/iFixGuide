@@ -1,5 +1,5 @@
 import PostCard from './PostCard'
-import { Post } from '@/utils/posts'
+import { Post } from '@/lib/posts'
 
 interface RelatedPostsProps {
   posts: Post[]

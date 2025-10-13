@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { trackContactForm } from '@/utils/analytics'
+import { trackContactForm } from '@/lib/analytics'
 
 interface ContactFormData {
   name: string

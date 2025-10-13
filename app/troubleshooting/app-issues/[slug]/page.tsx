@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
-import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/utils/posts'
-import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/utils/seo'
+import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/lib/posts'
+import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo'
 import RelatedPosts from '@/components/RelatedPosts'
 import { remark } from 'remark'
 import html from 'remark-html'

@@ -1,4 +1,4 @@
-import { getAllPosts } from '@/utils/posts'
+import { getAllPosts } from '@/lib/posts'
 import FadeIn from '@/components/FadeIn'
 import Link from 'next/link'
 

@@ -1,7 +1,7 @@
-import { getAllPosts } from '@/utils/posts'
+import { getAllPosts } from '@/lib/posts'
 import PostCard from '@/components/PostCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { generateSEO } from '@/utils/seo'
+import { generateSEO } from '@/lib/seo'
 
 export const metadata = generateSEO({
   title: 'All Troubleshooting Guides - iFixGuide',

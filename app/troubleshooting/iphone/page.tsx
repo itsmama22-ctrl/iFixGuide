@@ -1,7 +1,7 @@
-import { getPostsByCategory } from '@/utils/posts'
+import { getPostsByCategory } from '@/lib/posts'
 import PostCard from '@/components/PostCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import { generateSEO } from '@/utils/seo'
+import { generateSEO } from '@/lib/seo'
 
 export const metadata = generateSEO({
   title: 'iPhone Troubleshooting Guides - iFixGuide',
