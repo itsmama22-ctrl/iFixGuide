@@ -2,7 +2,7 @@ import { getAllPosts } from '@/utils/posts'
 import PostCard from '@/components/PostCard'
 import Hero from '@/components/Hero'
 import CategorySection from '@/components/CategorySection'
-import { motion } from 'framer-motion'
+import FadeIn from '@/components/FadeIn'
 
 export default function Home() {
   const posts = getAllPosts()
@@ -16,30 +16,18 @@ export default function Home() {
       {/* Featured Posts */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+          <FadeIn className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Latest Troubleshooting Guides
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Stay up-to-date with our newest step-by-step solutions for iPhone and iOS problems
             </p>
-          </motion.div>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPosts.map((post, index) => (
-              <motion.div
-                key={post.slug}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
+              <FadeIn key={post.slug} delay={index * 0.1}>
                 <PostCard
                   title={post.title}
                   description={post.description}
@@ -49,7 +37,7 @@ export default function Home() {
                   image={post.image}
                   readTime={post.readTime}
                 />
-              </motion.div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -61,20 +49,14 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+          <FadeIn className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose iFixGuide?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We provide expert solutions that actually work, backed by years of iOS experience
             </p>
-          </motion.div>
+          </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
@@ -106,20 +88,13 @@ export default function Home() {
                 description: "Regularly updated content for the latest iOS versions and iPhone models"
               }
             ].map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="text-center"
-              >
+              <FadeIn key={feature.title} delay={index * 0.2} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -128,12 +103,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding bg-gradient-to-br from-blue-600 to-cyan-600">
         <div className="container-custom text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Can't Find What You're Looking For?
             </h2>
@@ -160,7 +130,7 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-          </motion.div>
+          </FadeIn>
         </div>
       </section>
     </>
