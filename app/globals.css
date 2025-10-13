@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-primary-600 px-6 py-3 rounded-lg font-semibold border-2 border-primary-600 hover:bg-primary-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .prose-custom {
+    @apply prose prose-lg prose-blue max-w-none;
+  }
+  
+  .prose-custom h2 {
+    @apply text-2xl font-bold mt-8 mb-4 text-gray-900;
+  }
+  
+  .prose-custom h3 {
+    @apply text-xl font-semibold mt-6 mb-3 text-gray-900;
+  }
+  
+  .prose-custom p {
+    @apply mb-4 text-gray-700 leading-relaxed;
+  }
+  
+  .prose-custom ul,
+  .prose-custom ol {
+    @apply mb-4 ml-6;
+  }
+  
+  .prose-custom li {
+    @apply mb-2;
+  }
+  
+  .prose-custom code {
+    @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono;
+  }
+  
+  .prose-custom pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+  }
+  
+  .prose-custom a {
+    @apply text-primary-600 hover:text-primary-700 underline;
+  }
+  
+  .prose-custom img {
+    @apply rounded-lg shadow-md my-6;
+  }
+  
+  .prose-custom blockquote {
+    @apply border-l-4 border-primary-500 pl-4 italic text-gray-700 my-4;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+  }
+}
+
+/* Core Web Vitals Optimizations */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent layout shift */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
