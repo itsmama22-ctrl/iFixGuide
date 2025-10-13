@@ -303,7 +303,7 @@ Copyright © 2025 iFixGuide. All rights reserved.
 ## 🆘 Support
 
 For issues or questions:
-- Email: support@ifixguide.com
+- Email: contact.ifixguide@gmail.com
 - Website: [ifixguide.com/contact](https://ifixguide.com/contact)
 
 ## 🎯 Goals

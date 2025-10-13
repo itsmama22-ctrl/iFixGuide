@@ -143,7 +143,7 @@ export default function PrivacyPolicy() {
             If you have any questions about this Privacy Policy, please contact us at:
           </p>
           <ul>
-            <li>Email: privacy@ifixguide.com</li>
+            <li>Email: contact.ifixguide@gmail.com</li>
             <li>Contact Page: <a href="/contact">/contact</a></li>
           </ul>
         </div>

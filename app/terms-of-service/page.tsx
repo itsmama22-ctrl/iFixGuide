@@ -142,7 +142,7 @@ export default function TermsOfService() {
             If you have any questions about these Terms of Service, please contact us at:
           </p>
           <ul>
-            <li>Email: legal@ifixguide.com</li>
+            <li>Email: contact.ifixguide@gmail.com</li>
             <li>Contact Page: <a href="/contact">/contact</a></li>
           </ul>
         </div>

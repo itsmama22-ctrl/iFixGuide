@@ -7,4 +7,3 @@ Host: https://ifixguide.com
 
 # Sitemaps
 Sitemap: https://ifixguide.com/sitemap.xml
-

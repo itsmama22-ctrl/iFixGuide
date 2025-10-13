@@ -185,7 +185,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
-      email: 'support@ifixguide.com',
+      email: 'contact.ifixguide@gmail.com',
     },
   }
 }
