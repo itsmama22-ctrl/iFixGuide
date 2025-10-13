@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { format } from 'date-fns'
@@ -38,13 +40,10 @@ export default function PostCard({
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
         <div className="relative h-48 overflow-hidden">
           {!imageError && image && image.startsWith('http') ? (
-            <Image
+            <img
               src={image}
               alt={title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              unoptimized={true}
+              className="w-full h-full object-cover"
               onError={() => {
                 console.log('Image failed to load:', image)
                 setImageError(true)
