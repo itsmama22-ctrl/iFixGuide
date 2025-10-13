@@ -50,6 +50,25 @@ export default function GuideCard({
     'ios-updates': '⚙️'
   }
 
+  // Get image URL with fallback
+  const getImageUrl = (category: string, slug: string, image: string) => {
+    // If image URL is provided, use it
+    if (image && image.startsWith('http')) {
+      return image
+    }
+    
+    // Otherwise use category-based Unsplash images
+    const imageMap: { [key: string]: string } = {
+      'iphone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop&crop=center',
+      'battery': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center',
+      'connectivity': 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop&crop=center',
+      'camera': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&h=600&fit=crop&crop=center',
+      'app-issues': 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop&crop=center',
+      'ios-updates': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&h=600&fit=crop&crop=center'
+    }
+    return imageMap[category] || imageMap['iphone']
+  }
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
@@ -61,35 +80,29 @@ export default function GuideCard({
     >
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
         <div className="relative h-56 overflow-hidden">
-          {/* Gradient Background */}
-          <div className={`w-full h-full bg-gradient-to-br ${categoryColors[category]} relative`}>
-            {/* Pattern Overlay */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-4 right-4 w-20 h-20 border-2 border-white/20 rounded-full"></div>
-              <div className="absolute bottom-4 left-4 w-16 h-16 border border-white/20 rounded-full"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-white/10 rounded-full"></div>
-            </div>
-            
-            {/* Category Icon */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">
-                {categoryIcons[category]}
-              </div>
-            </div>
-            
-            {/* Category Badge */}
-            <div className="absolute top-4 left-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/20 backdrop-blur-sm text-white border border-white/30">
-                {categoryNames[category]}
-              </span>
-            </div>
-            
-            {/* Read Time */}
-            <div className="absolute top-4 right-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/20 backdrop-blur-sm text-white border border-white/30">
-                {readTime} min read
-              </span>
-            </div>
+          {/* Image */}
+          <img
+            src={getImageUrl(category, slug, image)}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+          />
+          
+          {/* Gradient Overlay */}
+          <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent`}></div>
+          
+          {/* Category Badge */}
+          <div className="absolute top-4 left-4 z-10">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-gray-900 shadow-lg">
+              {categoryIcons[category]} {categoryNames[category]}
+            </span>
+          </div>
+          
+          {/* Read Time */}
+          <div className="absolute top-4 right-4 z-10">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-gray-900 shadow-lg">
+              ⏱️ {readTime} min
+            </span>
           </div>
         </div>
       </Link>
