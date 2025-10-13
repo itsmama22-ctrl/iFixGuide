@@ -1,189 +1,168 @@
-import Link from 'next/link'
 import { getAllPosts } from '@/utils/posts'
 import PostCard from '@/components/PostCard'
+import Hero from '@/components/Hero'
+import CategorySection from '@/components/CategorySection'
+import { motion } from 'framer-motion'
 
 export default function Home() {
-  const allPosts = getAllPosts()
-  const featuredPosts = allPosts.slice(0, 6)
-
-  const categories = [
-    {
-      name: 'iPhone Issues',
-      description: 'Comprehensive guides for iPhone-specific problems',
-      href: '/troubleshooting/iphone',
-      icon: '📱',
-    },
-    {
-      name: 'Battery Problems',
-      description: 'Fix battery drain and charging issues',
-      href: '/troubleshooting/battery',
-      icon: '🔋',
-    },
-    {
-      name: 'Connectivity',
-      description: 'Solve WiFi, Bluetooth, and cellular issues',
-      href: '/troubleshooting/connectivity',
-      icon: '📡',
-    },
-    {
-      name: 'Camera Issues',
-      description: 'Troubleshoot camera and photo problems',
-      href: '/troubleshooting/camera',
-      icon: '📷',
-    },
-    {
-      name: 'App Problems',
-      description: 'Fix app crashes and performance issues',
-      href: '/troubleshooting/app-issues',
-      icon: '📲',
-    },
-    {
-      name: 'iOS Updates',
-      description: 'Navigate iOS update problems',
-      href: '/troubleshooting/ios-updates',
-      icon: '⚙️',
-    },
-  ]
+  const posts = getAllPosts()
+  const featuredPosts = posts.slice(0, 6)
 
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
-        <div className="container-custom">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-              Expert iPhone & iOS Troubleshooting Guides
-            </h1>
-            <p className="text-xl mb-8 text-primary-100">
-              Fix your iPhone problems with our comprehensive, step-by-step guides. 
-              From battery issues to camera glitches, we've got you covered.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/troubleshooting/iphone" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-                Browse Guides
-              </Link>
-              <Link href="/newsletter" className="btn-secondary border-white text-white hover:bg-white/10">
-                Subscribe to Newsletter
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            Browse by Category
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.href}
-                className="card p-6 hover:shadow-xl transition-shadow"
-              >
-                <div className="text-4xl mb-4">{category.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {category.name}
-                </h3>
-                <p className="text-gray-600">{category.description}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <Hero />
+      
       {/* Featured Posts */}
-      <section className="py-16 bg-gray-50">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Latest Troubleshooting Guides
             </h2>
-            <Link 
-              href="/troubleshooting/iphone"
-              className="text-primary-600 hover:text-primary-700 font-medium"
-            >
-              View All →
-            </Link>
-          </div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Stay up-to-date with our newest step-by-step solutions for iPhone and iOS problems
+            </p>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post) => (
-              <PostCard
+            {featuredPosts.map((post, index) => (
+              <motion.div
                 key={post.slug}
-                title={post.title}
-                description={post.description}
-                date={post.date}
-                category={post.category}
-                slug={post.slug}
-                image={post.image}
-                readTime={post.readTime}
-              />
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <PostCard
+                  title={post.title}
+                  description={post.description}
+                  date={post.date}
+                  category={post.category}
+                  slug={post.slug}
+                  image={post.image}
+                  readTime={post.readTime}
+                />
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Categories */}
+      <CategorySection />
+
       {/* Why Choose Us */}
-      <section className="py-16 bg-white">
+      <section className="section-padding bg-white">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Why Choose iFixGuide?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Expert Solutions</h3>
-              <p className="text-gray-600">
-                Well-researched guides tested by our team of iOS experts
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Quick Fixes</h3>
-              <p className="text-gray-600">
-                Step-by-step solutions to get your device working fast
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Always Updated</h3>
-              <p className="text-gray-600">
-                Regularly updated content for the latest iOS versions
-              </p>
-            </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose iFixGuide?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide expert solutions that actually work, backed by years of iOS experience
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              {
+                icon: (
+                  <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                title: "Expert Solutions",
+                description: "Well-researched guides tested by our team of iOS experts and verified by real users"
+              },
+              {
+                icon: (
+                  <svg className="w-12 h-12 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                ),
+                title: "Quick Fixes",
+                description: "Step-by-step solutions designed to get your device working fast with minimal effort"
+              },
+              {
+                icon: (
+                  <svg className="w-12 h-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                ),
+                title: "Always Updated",
+                description: "Regularly updated content for the latest iOS versions and iPhone models"
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="py-16 bg-primary-600">
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-br from-blue-600 to-cyan-600">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Stay Updated with Weekly Tips
-          </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Get the latest troubleshooting guides and iOS tips delivered to your inbox every week
-          </p>
-          <Link href="/newsletter" className="btn-primary bg-white text-primary-600 hover:bg-gray-100">
-            Subscribe Now
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Contact our expert team and we'll help you find the perfect solution to your iPhone problem.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-blue-600 bg-white rounded-2xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Expert Help
+                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+              <a 
+                href="/newsletter" 
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-transparent border-2 border-white rounded-2xl shadow-lg hover:shadow-xl hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Join Our Newsletter
+                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
   )
 }
-
