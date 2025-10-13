@@ -50,24 +50,26 @@ export default function GuideCard({
     'ios-updates': '⚙️'
   }
 
-  // Get image URL with fallback
+  // Get image URL with fallback - using direct URLs that work
   const getImageUrl = (category: string, slug: string, image: string) => {
-    // If image URL is provided, use it
+    // If image URL is provided and starts with http, use it
     if (image && image.startsWith('http')) {
       return image
     }
     
-    // Otherwise use category-based Unsplash images
+    // Category-based fallback images - using working Unsplash URLs
     const imageMap: { [key: string]: string } = {
-      'iphone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop&crop=center',
-      'battery': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center',
-      'connectivity': 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop&crop=center',
-      'camera': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&h=600&fit=crop&crop=center',
-      'app-issues': 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop&crop=center',
-      'ios-updates': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&h=600&fit=crop&crop=center'
+      'iphone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop',
+      'battery': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
+      'connectivity': 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop',
+      'camera': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&h=600&fit=crop',
+      'app-issues': 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
+      'ios-updates': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&h=600&fit=crop'
     }
     return imageMap[category] || imageMap['iphone']
   }
+
+  const imageUrl = getImageUrl(category, slug, image)
 
   return (
     <motion.article
@@ -79,17 +81,30 @@ export default function GuideCard({
       className="card overflow-hidden h-full flex flex-col group"
     >
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
-        <div className="relative h-56 overflow-hidden">
+        <div className="relative h-56 overflow-hidden bg-gray-200">
           {/* Image */}
           <img
-            src={getImageUrl(category, slug, image)}
+            src={imageUrl}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             loading="lazy"
+            onError={(e) => {
+              // Fallback if image fails to load
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              target.parentElement!.classList.add('bg-gradient-to-br', categoryColors[category].split(' ')[0], categoryColors[category].split(' ')[1]);
+            }}
           />
           
           {/* Gradient Overlay */}
           <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent`}></div>
+          
+          {/* Category Icon (visible when image loads or as fallback) */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="text-6xl opacity-30 group-hover:scale-110 transition-transform duration-300">
+              {categoryIcons[category]}
+            </div>
+          </div>
           
           {/* Category Badge */}
           <div className="absolute top-4 left-4 z-10">
