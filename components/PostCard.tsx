@@ -33,16 +33,28 @@ export default function PostCard({
   return (
     <article className="card overflow-hidden h-full flex flex-col">
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
-        <div className="relative h-48 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-          <div className="text-white text-center p-4">
-            <div className="text-4xl mb-2">
-              {category === 'iphone' && '📱'}
-              {category === 'battery' && '🔋'}
-              {category === 'connectivity' && '📡'}
-              {category === 'camera' && '📷'}
-              {category === 'app-issues' && '📲'}
-              {category === 'ios-updates' && '⚙️'}
-            </div>
+        <div className="relative h-48 overflow-hidden">
+      <Image
+        src={image}
+        alt={title}
+        fill
+        className="object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+      <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+        <div className="text-white text-center p-4">
+          <div className="text-4xl mb-2">
+            {category === 'iphone' && '📱'}
+            {category === 'battery' && '🔋'}
+            {category === 'connectivity' && '📡'}
+            {category === 'camera' && '📷'}
+            {category === 'app-issues' && '📲'}
+            {category === 'ios-updates' && '⚙️'}
+          </div>
+          <div className="text-sm font-medium opacity-90 bg-black/50 px-2 py-1 rounded">{categoryNames[category] || category}</div>
+        </div>
+      </div>
+    </div>
             <div className="text-sm font-medium opacity-90">{categoryNames[category] || category}</div>
           </div>
         </div>
