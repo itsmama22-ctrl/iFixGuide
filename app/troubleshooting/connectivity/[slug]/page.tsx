@@ -3,9 +3,9 @@ import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/utils/posts'
 import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/utils/seo'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import RelatedPosts from '@/components/RelatedPosts'
-import PostHeader from '@/components/PostHeader'
 import { remark } from 'remark'
 import html from 'remark-html'
+import { format } from 'date-fns'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -45,58 +45,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const processedContent = await remark()
     .use(html)
     .process(post.content)
-  let contentHtml = processedContent.toString()
-
-  // Add images to the post content
-  const addImagesToContent = (html: string, category: string) => {
-    const categoryImages: { [key: string]: string[] } = {
-      'iphone': [
-        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=800',
-      ],
-      'battery': [
-        'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/4792287/pexels-photo-4792287.jpeg?auto=compress&cs=tinysrgb&w=800',
-      ],
-      'connectivity': [
-        'https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&w=800',
-      ],
-      'camera': [
-        'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
-      ],
-      'app-issues': [
-        'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
-      ],
-      'ios-updates': [
-        'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
-      ]
-    }
-
-    const images = categoryImages[category] || categoryImages['iphone']
-    const randomImage = images[Math.floor(Math.random() * images.length)]
-    
-    // Add image after the first h2 tag
-    const imageHtml = `
-      <div class="my-8">
-        <img 
-          src="${randomImage}" 
-          alt="iPhone troubleshooting guide illustration" 
-          class="w-full h-64 object-cover rounded-lg shadow-lg"
-        />
-        <p class="text-center text-sm text-gray-600 mt-2">iPhone troubleshooting guide illustration</p>
-      </div>
-    `
-    
-    // Insert image after first h2
-    return html.replace(/<\/h2>/, `</h2>${imageHtml}`)
-  }
-
-  contentHtml = addImagesToContent(contentHtml, post.category)
+  const contentHtml = processedContent.toString()
 
   const relatedPosts = getRelatedPosts(post)
 
@@ -128,15 +77,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
       />
 
       <article className="bg-white">
-        <PostHeader
-          title={post.title}
-          date={post.date}
-          readTime={post.readTime}
-          author={post.author}
-          image={post.image}
-          category="iphone"
-        />
-
         <div className="container-custom max-w-4xl py-12">
           <Breadcrumbs 
             items={[
@@ -146,8 +86,23 @@ export default async function Post({ params }: { params: { slug: string } }) {
             ]} 
           />
 
+          <header className="mb-8">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              {post.title}
+            </h1>
+            <div className="flex flex-wrap items-center gap-4 text-gray-600">
+              <time dateTime={post.date}>
+                {format(new Date(post.date), 'MMMM dd, yyyy')}
+              </time>
+              <span>•</span>
+              <span>{post.readTime} min read</span>
+              <span>•</span>
+              <span>By {post.author}</span>
+            </div>
+          </header>
+
           <div 
-            className="prose-custom mt-8"
+            className="prose-custom"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </div>
