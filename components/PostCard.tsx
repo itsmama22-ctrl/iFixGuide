@@ -33,14 +33,18 @@ export default function PostCard({
   return (
     <article className="card overflow-hidden h-full flex flex-col">
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
-        <div className="relative h-48 bg-gray-200">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+        <div className="relative h-48 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+          <div className="text-white text-center p-4">
+            <div className="text-4xl mb-2">
+              {category === 'iphone' && '📱'}
+              {category === 'battery' && '🔋'}
+              {category === 'connectivity' && '📡'}
+              {category === 'camera' && '📷'}
+              {category === 'app-issues' && '📲'}
+              {category === 'ios-updates' && '⚙️'}
+            </div>
+            <div className="text-sm font-medium opacity-90">{categoryNames[category] || category}</div>
+          </div>
         </div>
       </Link>
       

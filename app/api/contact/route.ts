@@ -22,15 +22,48 @@ export async function POST(request: Request) {
       )
     }
 
-    // TODO: Implement your email sending logic here
-    // Options include:
-    // - SendGrid
-    // - AWS SES
-    // - Resend
-    // - NodeMailer
-    // - Formspree
+    // Email notification using Resend (Free tier: 100 emails/day)
+    // Sign up at https://resend.com and get API key
+    const RESEND_API_KEY = process.env.RESEND_API_KEY
     
-    // For now, we'll log the contact form submission
+    if (RESEND_API_KEY) {
+      try {
+        const response = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${RESEND_API_KEY}`,
+          },
+          body: JSON.stringify({
+            from: 'iFixGuide <onboarding@resend.dev>', // Change after domain verification
+            to: ['contact.ifixguide@gmail.com'],
+            subject: `Contact Form: ${subject}`,
+            html: `
+              <h2>New Contact Form Submission</h2>
+              <p><strong>From:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Subject:</strong> ${subject}</p>
+              <h3>Message:</h3>
+              <p>${message.replace(/\n/g, '<br>')}</p>
+              <hr>
+              <p><small>Sent from iFixGuide contact form</small></p>
+            `,
+          }),
+        })
+
+        if (!response.ok) {
+          console.error('Resend API error:', await response.text())
+        }
+      } catch (emailError) {
+        console.error('Email sending error:', emailError)
+        // Don't fail the request if email fails - still log it
+      }
+    }
+
+    // Alternative: Gmail SMTP (if you prefer using Gmail directly)
+    // Requires additional setup with nodemailer
+    
+    // Log submission for backup (always happens)
     console.log('Contact form submission:', {
       name,
       email,
@@ -39,8 +72,6 @@ export async function POST(request: Request) {
       timestamp: new Date().toISOString(),
     })
 
-    // You can also save to a database or send to a webhook
-    
     return NextResponse.json(
       { message: 'Message sent successfully' },
       { status: 200 }
@@ -53,4 +84,3 @@ export async function POST(request: Request) {
     )
   }
 }
-

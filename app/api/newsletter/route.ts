@@ -14,23 +14,77 @@ export async function POST(request: Request) {
       )
     }
 
-    // TODO: Implement your newsletter service integration
-    // Popular options:
-    // - Mailchimp
-    // - ConvertKit
-    // - SendGrid
-    // - Buttondown
-    // - Substack
+    // Email notification using Resend
+    const RESEND_API_KEY = process.env.RESEND_API_KEY
+    
+    if (RESEND_API_KEY) {
+      try {
+        // Send notification to yourself
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${RESEND_API_KEY}`,
+          },
+          body: JSON.stringify({
+            from: 'iFixGuide <onboarding@resend.dev>',
+            to: ['contact.ifixguide@gmail.com'],
+            subject: 'New Newsletter Subscription',
+            html: `
+              <h2>New Newsletter Subscriber</h2>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Name:</strong> ${name || 'Not provided'}</p>
+              <p><strong>Subscribed:</strong> ${new Date().toLocaleString()}</p>
+              <hr>
+              <p><small>Sent from iFixGuide newsletter form</small></p>
+            `,
+          }),
+        })
 
-    // For now, we'll log the subscription
+        // Send welcome email to subscriber
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${RESEND_API_KEY}`,
+          },
+          body: JSON.stringify({
+            from: 'iFixGuide <onboarding@resend.dev>',
+            to: [email],
+            subject: 'Welcome to iFixGuide Newsletter!',
+            html: `
+              <h2>Welcome to iFixGuide!</h2>
+              <p>Hi ${name || 'there'},</p>
+              <p>Thanks for subscribing to our weekly newsletter! You'll receive:</p>
+              <ul>
+                <li>Latest iPhone troubleshooting guides</li>
+                <li>Exclusive tips and tricks</li>
+                <li>Early access to new content</li>
+              </ul>
+              <p>You can unsubscribe anytime by replying to this email.</p>
+              <p>Best regards,<br>The iFixGuide Team</p>
+              <hr>
+              <p><small>iFixGuide - Expert iPhone & iOS Troubleshooting</small></p>
+            `,
+          }),
+        })
+      } catch (emailError) {
+        console.error('Email sending error:', emailError)
+      }
+    }
+
+    // Alternative: Store in database or spreadsheet
+    // - Airtable
+    // - Google Sheets API
+    // - Supabase
+    
+    // Log subscription for backup
     console.log('Newsletter subscription:', {
       email,
       name,
       timestamp: new Date().toISOString(),
     })
 
-    // You can also save to a database or send to a webhook
-    
     return NextResponse.json(
       { message: 'Subscription successful' },
       { status: 200 }
@@ -43,4 +97,3 @@ export async function POST(request: Request) {
     )
   }
 }
-
