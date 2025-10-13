@@ -38,31 +38,20 @@ export default function PostCard({
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
         <div className="relative h-48 overflow-hidden">
           {!imageError && image && image.startsWith('http') ? (
-            <>
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                onError={() => {
-                  console.log('Image failed to load:', image)
-                  setImageError(true)
-                }}
-                onLoad={() => console.log('Image loaded successfully:', image)}
-              />
-              {/* Debug info - remove this later */}
-              <div className="absolute top-2 left-2 bg-black/50 text-white text-xs p-1 rounded">
-                Debug: {image.substring(0, 30)}...
-              </div>
-            </>
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onError={() => {
+                console.log('Image failed to load:', image)
+                setImageError(true)
+              }}
+              onLoad={() => console.log('Image loaded successfully:', image)}
+            />
           ) : (
-            <div className="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700">
-              {/* Debug info - remove this later */}
-              <div className="absolute top-2 left-2 bg-red-500/50 text-white text-xs p-1 rounded">
-                No image: {image || 'undefined'}
-              </div>
-            </div>
+            <div className="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700"></div>
           )}
           <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
             <div className="text-white text-center p-4">
