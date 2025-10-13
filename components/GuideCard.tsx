@@ -33,17 +33,37 @@ export default function GuideCard({
     'ios-updates': 'iOS Updates',
   }
 
-  // Using a reliable image placeholder service with category-specific images
-  const getPlaceholderImage = (category: string) => {
-    const categoryImages: { [key: string]: string } = {
-      'iphone': 'https://placehold.co/800x600/3b82f6/ffffff?text=iPhone+Troubleshooting',
-      'battery': 'https://placehold.co/800x600/10b981/ffffff?text=Battery+Solutions',
-      'connectivity': 'https://placehold.co/800x600/8b5cf6/ffffff?text=Connectivity+Fixes',
-      'camera': 'https://placehold.co/800x600/f97316/ffffff?text=Camera+Guides',
-      'app-issues': 'https://placehold.co/800x600/ef4444/ffffff?text=App+Issues',
-      'ios-updates': 'https://placehold.co/800x600/06b6d4/ffffff?text=iOS+Updates'
+  // Real photos from Pexels for each category
+  const getCategoryImage = (category: string) => {
+    const categoryImages: { [key: string]: string[] } = {
+      'iphone': [
+        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
+        'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
+        'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=800',
+      ],
+      'battery': [
+        'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=800',
+        'https://images.pexels.com/photos/4792287/pexels-photo-4792287.jpeg?auto=compress&cs=tinysrgb&w=800',
+      ],
+      'connectivity': [
+        'https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=800',
+        'https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&w=800',
+      ],
+      'camera': [
+        'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
+        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
+      ],
+      'app-issues': [
+        'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=800',
+        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
+      ],
+      'ios-updates': [
+        'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=800',
+        'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
+      ]
     }
-    return categoryImages[category] || categoryImages['iphone']
+    const images = categoryImages[category] || categoryImages['iphone']
+    return images[Math.floor(Math.random() * images.length)]
   }
 
   const categoryIcons: { [key: string]: string } = {
@@ -55,7 +75,7 @@ export default function GuideCard({
     'ios-updates': '⚙️'
   }
 
-  const imageUrl = image && image.startsWith('http') ? image : getPlaceholderImage(category)
+  const imageUrl = image && image.startsWith('http') ? image : getCategoryImage(category)
 
   return (
     <motion.article

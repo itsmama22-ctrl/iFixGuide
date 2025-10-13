@@ -1,4 +1,7 @@
+'use client'
+
 import { format } from 'date-fns'
+import { useState } from 'react'
 
 interface PostHeaderProps {
   title: string
@@ -9,90 +12,114 @@ interface PostHeaderProps {
   category: string
 }
 
-const categoryData: { [key: string]: { name: string; icon: string; gradient: string } } = {
+const categoryData: { [key: string]: { name: string; icon: string; images: string[] } } = {
   'iphone': {
     name: 'iPhone Troubleshooting',
     icon: '📱',
-    gradient: 'from-blue-500 to-blue-700'
+    images: [
+      'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ]
   },
   'battery': {
     name: 'Battery Solutions',
     icon: '🔋',
-    gradient: 'from-green-500 to-green-700'
+    images: [
+      'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/4792287/pexels-photo-4792287.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/163123/mobile-phone-battery-technology-phone-163123.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/4792277/pexels-photo-4792277.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ]
   },
   'connectivity': {
     name: 'Connectivity Fixes',
     icon: '📡',
-    gradient: 'from-purple-500 to-purple-700'
+    images: [
+      'https://images.pexels.com/photos/4792728/pexels-photo-4792728.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/4792281/pexels-photo-4792281.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ]
   },
   'camera': {
     name: 'Camera Guides',
     icon: '📷',
-    gradient: 'from-orange-500 to-orange-700'
+    images: [
+      'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ]
   },
   'app-issues': {
     name: 'App Issues',
     icon: '📲',
-    gradient: 'from-red-500 to-red-700'
+    images: [
+      'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ]
   },
   'ios-updates': {
     name: 'iOS Updates',
     icon: '⚙️',
-    gradient: 'from-cyan-500 to-cyan-700'
+    images: [
+      'https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ]
   }
 }
 
 export default function PostHeader({ title, date, readTime, author, image, category }: PostHeaderProps) {
   const data = categoryData[category] || categoryData['iphone']
+  const [imageError, setImageError] = useState(false)
+  
+  // Get a random image from the category
+  const randomImage = data.images[Math.floor(Math.random() * data.images.length)]
+  const finalImage = image && image.startsWith('http') ? image : randomImage
 
   return (
-    <div className={`relative w-full h-96 bg-gradient-to-br ${data.gradient} mb-12 overflow-hidden`}>
-      {/* Gradient Background with Pattern */}
-      <div className="absolute inset-0">
-        {/* Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-64 h-64 rounded-full border-4 border-white/30 -mr-32 -mt-32"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full border-2 border-white/20 -ml-24 -mb-24"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-white/10"></div>
-          
-          {/* Grid Pattern */}
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
-            backgroundSize: '30px 30px'
-          }}></div>
-        </div>
-      </div>
-
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
+    <div className="relative w-full h-96 bg-gray-900 mb-12 overflow-hidden">
+      {/* Real Photo Background */}
+      {!imageError && (
+        <img
+          src={finalImage}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover"
+          onError={() => setImageError(true)}
+        />
+      )}
       
-      {/* Category Icon Watermark */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-15">
-        <div className="text-[200px]">{data.icon}</div>
-      </div>
+      {/* Dark Gradient Overlay for Text Readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
       
       {/* Content */}
       <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
         <div className="container-custom max-w-4xl">
-          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-white/30 backdrop-blur-sm mb-4 shadow-xl">
+          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-white/90 text-gray-900 mb-4 shadow-xl">
             <span className="mr-2">{data.icon}</span>
             {data.name}
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-2xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-2xl leading-tight">
             {title}
           </h1>
-          <div className="flex flex-wrap items-center gap-4 text-white/95 drop-shadow-lg">
+          <div className="flex flex-wrap items-center gap-4 text-white/95 drop-shadow-lg text-sm md:text-base">
             <time dateTime={date} className="font-medium">
-              {format(new Date(date), 'MMMM dd, yyyy')}
+              📅 {format(new Date(date), 'MMMM dd, yyyy')}
             </time>
             <span className="font-bold">•</span>
-            <span className="font-medium">{readTime} min read</span>
+            <span className="font-medium">⏱️ {readTime} min read</span>
             <span className="font-bold">•</span>
-            <span className="font-medium">By {author}</span>
+            <span className="font-medium">✍️ {author}</span>
           </div>
         </div>
       </div>
     </div>
   )
 }
-
