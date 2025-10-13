@@ -1,11 +1,10 @@
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPosts, getRelatedPosts } from '@/utils/posts'
 import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/utils/seo'
-import Breadcrumbs from '@/components/Breadcrumbs'
+import BeautifulPostHeader from '@/components/BeautifulPostHeader'
 import RelatedPosts from '@/components/RelatedPosts'
 import { remark } from 'remark'
 import html from 'remark-html'
-import { format } from 'date-fns'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -77,32 +76,23 @@ export default async function Post({ params }: { params: { slug: string } }) {
       />
 
       <article className="bg-white">
-        <div className="container-custom max-w-4xl py-12">
-          <Breadcrumbs 
-            items={[
-              { name: 'Troubleshooting', href: '/troubleshooting' },
-              { name: 'iPhone', href: '/troubleshooting/iphone' },
-              { name: post.title, href: `/troubleshooting/iphone/${params.slug}` }
-            ]} 
-          />
+        <BeautifulPostHeader
+          title={post.title}
+          date={post.date}
+          readTime={post.readTime}
+          author={post.author}
+          category="iphone"
+          breadcrumbs={[
+            { name: 'Troubleshooting', href: '/troubleshooting' },
+            { name: 'iPhone', href: '/troubleshooting/iphone' },
+            { name: post.title, href: `/troubleshooting/iphone/${params.slug}` }
+          ]}
+        />
 
-          <header className="mb-8">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              {post.title}
-            </h1>
-            <div className="flex flex-wrap items-center gap-4 text-gray-600">
-              <time dateTime={post.date}>
-                {format(new Date(post.date), 'MMMM dd, yyyy')}
-              </time>
-              <span>•</span>
-              <span>{post.readTime} min read</span>
-              <span>•</span>
-              <span>By {post.author}</span>
-            </div>
-          </header>
-
+        {/* Content Section */}
+        <div className="container-custom max-w-4xl py-16">
           <div 
-            className="prose-custom"
+            className="prose prose-lg prose-blue max-w-none"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </div>
