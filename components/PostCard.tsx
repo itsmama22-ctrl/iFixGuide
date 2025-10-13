@@ -1,9 +1,5 @@
-'use client'
-
 import Link from 'next/link'
-import Image from 'next/image'
 import { format } from 'date-fns'
-import { useState } from 'react'
 
 interface PostCardProps {
   title: string
@@ -24,8 +20,6 @@ export default function PostCard({
   image,
   readTime,
 }: PostCardProps) {
-  const [imageError, setImageError] = useState(false)
-  
   const categoryNames: { [key: string]: string } = {
     'iphone': 'iPhone',
     'battery': 'Battery',
@@ -35,52 +29,41 @@ export default function PostCard({
     'ios-updates': 'iOS Updates',
   }
 
+  // Simple image mapping - guaranteed to work
+  const getImageUrl = (category: string, slug: string) => {
+    const imageMap: { [key: string]: string } = {
+      'iphone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop&crop=center',
+      'battery': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center',
+      'connectivity': 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop&crop=center',
+      'camera': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&h=600&fit=crop&crop=center',
+      'app-issues': 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop&crop=center',
+      'ios-updates': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&h=600&fit=crop&crop=center'
+    }
+    return imageMap[category] || imageMap['iphone']
+  }
+
   return (
     <article className="card overflow-hidden h-full flex flex-col">
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
         <div className="relative h-48 overflow-hidden">
-          {!imageError && image && image.startsWith('http') ? (
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-cover"
-              onError={() => {
-                console.log('Image failed to load:', image)
-                setImageError(true)
-              }}
-              onLoad={() => console.log('Image loaded successfully:', image)}
-            />
-          ) : (
-            <div className="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-              <div className="text-white text-center">
-                <div className="text-4xl mb-2">
-                  {category === 'iphone' && '📱'}
-                  {category === 'battery' && '🔋'}
-                  {category === 'connectivity' && '📡'}
-                  {category === 'camera' && '📷'}
-                  {category === 'app-issues' && '📲'}
-                  {category === 'ios-updates' && '⚙️'}
-                </div>
-                <div className="text-sm font-medium opacity-90">{categoryNames[category] || category}</div>
+          <img
+            src={getImageUrl(category, slug)}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+            <div className="text-white text-center p-4">
+              <div className="text-4xl mb-2">
+                {category === 'iphone' && '📱'}
+                {category === 'battery' && '🔋'}
+                {category === 'connectivity' && '📡'}
+                {category === 'camera' && '📷'}
+                {category === 'app-issues' && '📲'}
+                {category === 'ios-updates' && '⚙️'}
               </div>
+              <div className="text-sm font-medium opacity-90 bg-black/50 px-2 py-1 rounded">{categoryNames[category] || category}</div>
             </div>
-          )}
-          {/* Category overlay - only show if image is loaded */}
-          {!imageError && image && image.startsWith('http') && (
-            <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-              <div className="text-white text-center p-4">
-                <div className="text-4xl mb-2">
-                  {category === 'iphone' && '📱'}
-                  {category === 'battery' && '🔋'}
-                  {category === 'connectivity' && '📡'}
-                  {category === 'camera' && '📷'}
-                  {category === 'app-issues' && '📲'}
-                  {category === 'ios-updates' && '⚙️'}
-                </div>
-                <div className="text-sm font-medium opacity-90 bg-black/50 px-2 py-1 rounded">{categoryNames[category] || category}</div>
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </Link>
       
