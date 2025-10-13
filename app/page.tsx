@@ -1,60 +1,17 @@
 import { getAllPosts } from '@/lib/posts'
+import { categories } from '@/lib/categories'
+import { POSTS_CONFIG } from '@/lib/constants'
 import FadeIn from '@/components/FadeIn'
 import Link from 'next/link'
 
 export default function HomePage() {
   const posts = getAllPosts()
-  const featuredPosts = posts.slice(0, 6)
-  const categories = [
-    {
-      name: 'iPhone Issues',
-      slug: 'iphone',
-      icon: '📱',
-      count: posts.filter(p => p.category === 'iphone').length,
-      gradient: 'from-blue-500 to-blue-700',
-      description: 'Screen, battery, and hardware fixes'
-    },
-    {
-      name: 'Battery Problems',
-      slug: 'battery',
-      icon: '🔋',
-      count: posts.filter(p => p.category === 'battery').length,
-      gradient: 'from-green-500 to-green-700',
-      description: 'Power and charging solutions'
-    },
-    {
-      name: 'Connectivity',
-      slug: 'connectivity',
-      icon: '📡',
-      count: posts.filter(p => p.category === 'connectivity').length,
-      gradient: 'from-purple-500 to-purple-700',
-      description: 'WiFi, Bluetooth, and network fixes'
-    },
-    {
-      name: 'Camera Issues',
-      slug: 'camera',
-      icon: '📷',
-      count: posts.filter(p => p.category === 'camera').length,
-      gradient: 'from-orange-500 to-orange-700',
-      description: 'Photo and video troubleshooting'
-    },
-    {
-      name: 'App Problems',
-      slug: 'app-issues',
-      icon: '📲',
-      count: posts.filter(p => p.category === 'app-issues').length,
-      gradient: 'from-red-500 to-red-700',
-      description: 'App crashes and performance'
-    },
-    {
-      name: 'iOS Updates',
-      slug: 'ios-updates',
-      icon: '⚙️',
-      count: posts.filter(p => p.category === 'ios-updates').length,
-      gradient: 'from-cyan-500 to-cyan-700',
-      description: 'Software and update issues'
-    }
-  ]
+  const featuredPosts = posts.slice(0, POSTS_CONFIG.featuredPostsCount)
+  
+  const categoriesWithCount = categories.map(cat => ({
+    ...cat,
+    count: posts.filter(p => p.category === cat.id).length
+  }))
 
   return (
     <div className="min-h-screen bg-white">
@@ -150,7 +107,7 @@ export default function HomePage() {
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category, index) => (
+            {categoriesWithCount.map((category, index) => (
               <FadeIn key={category.slug} delay={index * 100}>
                 <Link 
                   href={`/troubleshooting/${category.slug}`}
