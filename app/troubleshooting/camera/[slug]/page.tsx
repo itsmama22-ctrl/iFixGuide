@@ -87,12 +87,12 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
           </h1>
 
           {/* 2. HTML PICTURE */}
-          <div className={`mb-8 w-full h-96 rounded-2xl shadow-lg overflow-hidden bg-gradient-to-br ${categoryInfo?.gradient || 'from-blue-500 to-blue-700'} flex items-center justify-center`}>
-            <div className="text-center text-white p-8">
-              <div className="text-7xl mb-6">{categoryInfo?.icon || '📱'}</div>
-              <h2 className="text-3xl font-bold uppercase tracking-wide">{categoryInfo?.name || post.category}</h2>
-              <p className="text-white/80 mt-3 text-lg">iFixGuide</p>
-            </div>
+          <div className="mb-8">
+            <img
+              src={postImage}
+              alt={post.title}
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
           </div>
 
           {/* 3. CONTENT (PARAGRAPHS) */}
