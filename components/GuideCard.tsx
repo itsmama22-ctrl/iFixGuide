@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 interface GuideCardProps {
   title: string
@@ -87,15 +86,12 @@ export default function GuideCard({
       className="card overflow-hidden h-full flex flex-col group"
     >
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
-        <div className="relative h-56 overflow-hidden bg-gray-100">
-          {/* Image with Next.js Image component */}
-          <Image
+        <div className="relative h-56 overflow-hidden bg-gray-200">
+          {/* Real Image */}
+          <img
             src={imageUrl}
             alt={title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority={false}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           
           {/* Dark overlay for text readability */}
