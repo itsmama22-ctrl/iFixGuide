@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 interface GuideCardProps {
   title: string
@@ -32,40 +33,29 @@ export default function GuideCard({
     'ios-updates': 'iOS Updates',
   }
 
-  const categoryData: { [key: string]: { gradient: string; icon: string; pattern: string } } = {
-    'iphone': {
-      gradient: 'from-blue-500 via-blue-600 to-blue-700',
-      icon: '📱',
-      pattern: 'bg-blue-400/10'
-    },
-    'battery': {
-      gradient: 'from-green-500 via-green-600 to-green-700',
-      icon: '🔋',
-      pattern: 'bg-green-400/10'
-    },
-    'connectivity': {
-      gradient: 'from-purple-500 via-purple-600 to-purple-700',
-      icon: '📡',
-      pattern: 'bg-purple-400/10'
-    },
-    'camera': {
-      gradient: 'from-orange-500 via-orange-600 to-orange-700',
-      icon: '📷',
-      pattern: 'bg-orange-400/10'
-    },
-    'app-issues': {
-      gradient: 'from-red-500 via-red-600 to-red-700',
-      icon: '📲',
-      pattern: 'bg-red-400/10'
-    },
-    'ios-updates': {
-      gradient: 'from-cyan-500 via-cyan-600 to-cyan-700',
-      icon: '⚙️',
-      pattern: 'bg-cyan-400/10'
+  // Using a reliable image placeholder service with category-specific images
+  const getPlaceholderImage = (category: string) => {
+    const categoryImages: { [key: string]: string } = {
+      'iphone': 'https://placehold.co/800x600/3b82f6/ffffff?text=iPhone+Troubleshooting',
+      'battery': 'https://placehold.co/800x600/10b981/ffffff?text=Battery+Solutions',
+      'connectivity': 'https://placehold.co/800x600/8b5cf6/ffffff?text=Connectivity+Fixes',
+      'camera': 'https://placehold.co/800x600/f97316/ffffff?text=Camera+Guides',
+      'app-issues': 'https://placehold.co/800x600/ef4444/ffffff?text=App+Issues',
+      'ios-updates': 'https://placehold.co/800x600/06b6d4/ffffff?text=iOS+Updates'
     }
+    return categoryImages[category] || categoryImages['iphone']
   }
 
-  const data = categoryData[category] || categoryData['iphone']
+  const categoryIcons: { [key: string]: string } = {
+    'iphone': '📱',
+    'battery': '🔋',
+    'connectivity': '📡',
+    'camera': '📷',
+    'app-issues': '📲',
+    'ios-updates': '⚙️'
+  }
+
+  const imageUrl = image && image.startsWith('http') ? image : getPlaceholderImage(category)
 
   return (
     <motion.article
@@ -77,66 +67,42 @@ export default function GuideCard({
       className="card overflow-hidden h-full flex flex-col group"
     >
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
-        <div className="relative h-56 overflow-hidden">
-          {/* Gradient Background */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${data.gradient}`}>
-            {/* Animated Pattern Overlay */}
-            <div className="absolute inset-0 opacity-20">
-              {/* Circles Pattern */}
-              <div className="absolute top-0 right-0 w-40 h-40 rounded-full border-4 border-white/30 -mr-20 -mt-20"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full border-2 border-white/20 -ml-16 -mb-16"></div>
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-white/10"></div>
-              
-              {/* Grid Pattern */}
-              <div className="absolute inset-0" style={{
-                backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                backgroundSize: '20px 20px'
-              }}></div>
+        <div className="relative h-56 overflow-hidden bg-gray-100">
+          {/* Image with Next.js Image component */}
+          <Image
+            src={imageUrl}
+            alt={title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={false}
+          />
+          
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
+          
+          {/* Category Icon Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+            <div className="text-6xl opacity-40 filter drop-shadow-lg">
+              {categoryIcons[category]}
             </div>
-            
-            {/* Shine Effect on Hover */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           </div>
-          
-          {/* Large Category Icon */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <motion.div 
-              className="text-8xl filter drop-shadow-2xl"
-              animate={{ 
-                scale: [1, 1.05, 1],
-                rotate: [0, 2, -2, 0]
-              }}
-              transition={{ 
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              {data.icon}
-            </motion.div>
-          </div>
-          
-          {/* Top Gradient Overlay for better badge visibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
           
           {/* Category Badge */}
-          <div className="absolute top-4 left-4 z-10">
+          <div className="absolute top-4 left-4 z-30">
             <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-900 shadow-xl">
-              <span className="mr-2">{data.icon}</span>
+              <span className="mr-2">{categoryIcons[category]}</span>
               {categoryNames[category]}
             </span>
           </div>
           
           {/* Read Time */}
-          <div className="absolute top-4 right-4 z-10">
+          <div className="absolute top-4 right-4 z-30">
             <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-bold bg-white/95 backdrop-blur-sm text-gray-900 shadow-xl">
               <span className="mr-1.5">⏱️</span>
               {readTime} min
             </span>
           </div>
-          
-          {/* Bottom Info Bar */}
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-white/0 via-white/50 to-white/0"></div>
         </div>
       </Link>
       
