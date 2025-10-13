@@ -13,6 +13,8 @@ A frozen or unresponsive iPhone screen is one of the most frustrating issues you
 
 Before we dive into solutions, it's important to understand what causes touch screen issues:
 
+![iPhone troubleshooting guide](https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 - **Software glitches or bugs** in iOS or specific apps
 - **Screen protector interference** affecting touch sensitivity
 - **Physical damage** to the display or digitizer
