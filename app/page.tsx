@@ -1,138 +1,293 @@
 import { getAllPosts } from '@/utils/posts'
-import PostCard from '@/components/PostCard'
-import Hero from '@/components/Hero'
-import CategorySection from '@/components/CategorySection'
 import FadeIn from '@/components/FadeIn'
+import Link from 'next/link'
 
-export default function Home() {
+export default function HomePage() {
   const posts = getAllPosts()
   const featuredPosts = posts.slice(0, 6)
+  const categories = [
+    {
+      name: 'iPhone Issues',
+      slug: 'iphone',
+      icon: '📱',
+      count: posts.filter(p => p.category === 'iphone').length,
+      gradient: 'from-blue-500 to-blue-700',
+      description: 'Screen, battery, and hardware fixes'
+    },
+    {
+      name: 'Battery Problems',
+      slug: 'battery',
+      icon: '🔋',
+      count: posts.filter(p => p.category === 'battery').length,
+      gradient: 'from-green-500 to-green-700',
+      description: 'Power and charging solutions'
+    },
+    {
+      name: 'Connectivity',
+      slug: 'connectivity',
+      icon: '📡',
+      count: posts.filter(p => p.category === 'connectivity').length,
+      gradient: 'from-purple-500 to-purple-700',
+      description: 'WiFi, Bluetooth, and network fixes'
+    },
+    {
+      name: 'Camera Issues',
+      slug: 'camera',
+      icon: '📷',
+      count: posts.filter(p => p.category === 'camera').length,
+      gradient: 'from-orange-500 to-orange-700',
+      description: 'Photo and video troubleshooting'
+    },
+    {
+      name: 'App Problems',
+      slug: 'app-issues',
+      icon: '📲',
+      count: posts.filter(p => p.category === 'app-issues').length,
+      gradient: 'from-red-500 to-red-700',
+      description: 'App crashes and performance'
+    },
+    {
+      name: 'iOS Updates',
+      slug: 'ios-updates',
+      icon: '⚙️',
+      count: posts.filter(p => p.category === 'ios-updates').length,
+      gradient: 'from-cyan-500 to-cyan-700',
+      description: 'Software and update issues'
+    }
+  ]
 
   return (
-    <>
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <Hero />
-      
-      {/* Featured Posts */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <FadeIn className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Latest Troubleshooting Guides
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Stay up-to-date with our newest step-by-step solutions for iPhone and iOS problems
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
-              <FadeIn key={post.slug} delay={index * 0.1}>
-                <PostCard
-                  title={post.title}
-                  description={post.description}
-                  date={post.date}
-                  category={post.category}
-                  slug={post.slug}
-                  image={post.image}
-                  readTime={post.readTime}
-                />
-              </FadeIn>
-            ))}
-          </div>
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 pt-20">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-purple-100/20"></div>
         </div>
-      </section>
-
-      {/* Categories */}
-      <CategorySection />
-
-      {/* Why Choose Us */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <FadeIn className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why Choose iFixGuide?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide expert solutions that actually work, backed by years of iOS experience
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                icon: (
-                  <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                title: "Expert Solutions",
-                description: "Well-researched guides tested by our team of iOS experts and verified by real users"
-              },
-              {
-                icon: (
-                  <svg className="w-12 h-12 text-cyan-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
-                title: "Quick Fixes",
-                description: "Step-by-step solutions designed to get your device working fast with minimal effort"
-              },
-              {
-                icon: (
-                  <svg className="w-12 h-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                ),
-                title: "Always Updated",
-                description: "Regularly updated content for the latest iOS versions and iPhone models"
-              }
-            ].map((feature, index) => (
-              <FadeIn key={feature.title} delay={index * 0.2} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  {feature.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-blue-600 to-cyan-600">
-        <div className="container-custom text-center">
+        
+        <div className="container-custom relative z-10 py-20">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Can't Find What You're Looking For?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Contact our expert team and we'll help you find the perfect solution to your iPhone problem.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact" 
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-blue-600 bg-white rounded-2xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Expert Help
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </a>
-              <a 
-                href="/newsletter" 
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-transparent border-2 border-white rounded-2xl shadow-lg hover:shadow-xl hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
-                Join Our Newsletter
-                <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </a>
+            <div className="text-center max-w-4xl mx-auto">
+              <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 mb-6">
+                <span className="mr-2">🛠️</span>
+                Professional iPhone & iOS Troubleshooting
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Fix Your
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  iPhone Issues
+                </span>
+                <span className="block">Like a Pro</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Step-by-step guides to solve any iPhone or iOS problem. From battery issues to app crashes, 
+                we've got you covered with professional solutions.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/troubleshooting"
+                  className="btn-primary text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <span className="mr-2">🚀</span>
+                  Start Fixing Now
+                </Link>
+                <Link 
+                  href="/troubleshooting/iphone"
+                  className="btn-secondary text-lg px-8 py-4 rounded-xl border-2 hover:bg-gray-50 transition-all duration-300"
+                >
+                  <span className="mr-2">📱</span>
+                  iPhone Guides
+                </Link>
+              </div>
             </div>
           </FadeIn>
         </div>
       </section>
-    </>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <FadeIn>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="p-6">
+                <div className="text-4xl font-bold text-blue-600 mb-2">{posts.length}+</div>
+                <div className="text-gray-600 font-medium">Expert Guides</div>
+              </div>
+              <div className="p-6">
+                <div className="text-4xl font-bold text-green-600 mb-2">6</div>
+                <div className="text-gray-600 font-medium">Categories</div>
+              </div>
+              <div className="p-6">
+                <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                <div className="text-gray-600 font-medium">Free Solutions</div>
+              </div>
+              <div className="p-6">
+                <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+                <div className="text-gray-600 font-medium">Available</div>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Choose Your
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Problem Category
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Browse our comprehensive guides organized by problem type for quick solutions
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((category, index) => (
+              <FadeIn key={category.slug} delay={index * 100}>
+                <Link 
+                  href={`/troubleshooting/${category.slug}`}
+                  className="group block"
+                >
+                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-gray-200">
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${category.gradient} text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      {category.icon}
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      {category.name}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {category.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm font-semibold text-gray-500">
+                        {category.count} Guides
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
+                        <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Posts Section */}
+      <section className="py-20 bg-white">
+        <div className="container-custom">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Latest
+                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Expert Guides
+                </span>
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Fresh solutions to the most common iPhone and iOS problems
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredPosts.map((post, index) => (
+              <FadeIn key={post.slug} delay={index * 100}>
+                <Link 
+                  href={`/troubleshooting/${post.category}/${post.slug}`}
+                  className="group block"
+                >
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-gray-200 h-full">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
+                        {post.category}
+                      </div>
+                      <span className="text-sm text-gray-500">{post.readTime} min</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
+                      {post.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        {new Date(post.date).toLocaleDateString()}
+                      </span>
+                      <div className="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
+                        <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
+
+          <FadeIn>
+            <div className="text-center mt-12">
+              <Link 
+                href="/troubleshooting"
+                className="btn-primary text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <span className="mr-2">📚</span>
+                View All Guides
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+        <div className="container-custom">
+          <FadeIn>
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Can't Find Your Solution?
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                Contact our expert team for personalized help with your specific iPhone or iOS issue
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact"
+                  className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <span className="mr-2">💬</span>
+                  Contact Us
+                </Link>
+                <Link 
+                  href="/troubleshooting"
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 text-lg px-8 py-4 rounded-xl font-semibold transition-all duration-300"
+                >
+                  <span className="mr-2">🔍</span>
+                  Browse All Issues
+                </Link>
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+    </div>
   )
 }
