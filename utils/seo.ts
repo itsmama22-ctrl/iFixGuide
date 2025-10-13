@@ -29,6 +29,39 @@ export function generateSEO({
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl
   const ogImage = image || `${baseUrl}/images/og-default.jpg`
 
+  const openGraphData: any = {
+    type,
+    locale: 'en_US',
+    url: fullUrl,
+    siteName: 'iFixGuide',
+    title,
+    description,
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  }
+
+  // Add article-specific metadata
+  if (type === 'article') {
+    if (publishedTime) {
+      openGraphData.publishedTime = publishedTime
+    }
+    if (modifiedTime) {
+      openGraphData.modifiedTime = modifiedTime
+    }
+    if (author) {
+      openGraphData.authors = [author]
+    }
+    if (section) {
+      openGraphData.section = section
+    }
+  }
+
   const metadata: Metadata = {
     title,
     description,
@@ -37,22 +70,7 @@ export function generateSEO({
     alternates: {
       canonical: fullUrl,
     },
-    openGraph: {
-      type,
-      locale: 'en_US',
-      url: fullUrl,
-      siteName: 'iFixGuide',
-      title,
-      description,
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-    },
+    openGraph: openGraphData,
     twitter: {
       card: 'summary_large_image',
       title,
@@ -70,23 +88,6 @@ export function generateSEO({
         'max-snippet': -1,
       },
     },
-  }
-
-  // Add article-specific metadata
-  if (type === 'article' && metadata.openGraph) {
-    metadata.openGraph.type = 'article'
-    if (publishedTime) {
-      metadata.openGraph.publishedTime = publishedTime
-    }
-    if (modifiedTime) {
-      metadata.openGraph.modifiedTime = modifiedTime
-    }
-    if (author) {
-      metadata.openGraph.authors = [author]
-    }
-    if (section) {
-      metadata.openGraph.section = section
-    }
   }
 
   return metadata
