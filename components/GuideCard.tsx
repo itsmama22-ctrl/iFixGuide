@@ -32,44 +32,40 @@ export default function GuideCard({
     'ios-updates': 'iOS Updates',
   }
 
-  const categoryColors: { [key: string]: string } = {
-    'iphone': 'from-blue-500 to-blue-700',
-    'battery': 'from-green-500 to-green-700',
-    'connectivity': 'from-purple-500 to-purple-700',
-    'camera': 'from-yellow-500 to-yellow-700',
-    'app-issues': 'from-red-500 to-red-700',
-    'ios-updates': 'from-cyan-500 to-cyan-700'
-  }
-
-  const categoryIcons: { [key: string]: string } = {
-    'iphone': '📱',
-    'battery': '🔋',
-    'connectivity': '📡',
-    'camera': '📷',
-    'app-issues': '📲',
-    'ios-updates': '⚙️'
-  }
-
-  // Get image URL with fallback - using direct URLs that work
-  const getImageUrl = (category: string, slug: string, image: string) => {
-    // If image URL is provided and starts with http, use it
-    if (image && image.startsWith('http')) {
-      return image
+  const categoryData: { [key: string]: { gradient: string; icon: string; pattern: string } } = {
+    'iphone': {
+      gradient: 'from-blue-500 via-blue-600 to-blue-700',
+      icon: '📱',
+      pattern: 'bg-blue-400/10'
+    },
+    'battery': {
+      gradient: 'from-green-500 via-green-600 to-green-700',
+      icon: '🔋',
+      pattern: 'bg-green-400/10'
+    },
+    'connectivity': {
+      gradient: 'from-purple-500 via-purple-600 to-purple-700',
+      icon: '📡',
+      pattern: 'bg-purple-400/10'
+    },
+    'camera': {
+      gradient: 'from-orange-500 via-orange-600 to-orange-700',
+      icon: '📷',
+      pattern: 'bg-orange-400/10'
+    },
+    'app-issues': {
+      gradient: 'from-red-500 via-red-600 to-red-700',
+      icon: '📲',
+      pattern: 'bg-red-400/10'
+    },
+    'ios-updates': {
+      gradient: 'from-cyan-500 via-cyan-600 to-cyan-700',
+      icon: '⚙️',
+      pattern: 'bg-cyan-400/10'
     }
-    
-    // Category-based fallback images - using working Unsplash URLs
-    const imageMap: { [key: string]: string } = {
-      'iphone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop',
-      'battery': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-      'connectivity': 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop',
-      'camera': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&h=600&fit=crop',
-      'app-issues': 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop',
-      'ios-updates': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&h=600&fit=crop'
-    }
-    return imageMap[category] || imageMap['iphone']
   }
 
-  const imageUrl = getImageUrl(category, slug, image)
+  const data = categoryData[category] || categoryData['iphone']
 
   return (
     <motion.article
@@ -81,48 +77,70 @@ export default function GuideCard({
       className="card overflow-hidden h-full flex flex-col group"
     >
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
-        <div className="relative h-56 overflow-hidden bg-gray-200">
-          {/* Image */}
-          <img
-            src={imageUrl}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            loading="lazy"
-            onError={(e) => {
-              // Fallback if image fails to load
-              const target = e.target as HTMLImageElement;
-              target.style.display = 'none';
-              target.parentElement!.classList.add('bg-gradient-to-br', categoryColors[category].split(' ')[0], categoryColors[category].split(' ')[1]);
-            }}
-          />
-          
-          {/* Gradient Overlay */}
-          <div className={`absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent`}></div>
-          
-          {/* Category Icon (visible when image loads or as fallback) */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="text-6xl opacity-30 group-hover:scale-110 transition-transform duration-300">
-              {categoryIcons[category]}
+        <div className="relative h-56 overflow-hidden">
+          {/* Gradient Background */}
+          <div className={`absolute inset-0 bg-gradient-to-br ${data.gradient}`}>
+            {/* Animated Pattern Overlay */}
+            <div className="absolute inset-0 opacity-20">
+              {/* Circles Pattern */}
+              <div className="absolute top-0 right-0 w-40 h-40 rounded-full border-4 border-white/30 -mr-20 -mt-20"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full border-2 border-white/20 -ml-16 -mb-16"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-white/10"></div>
+              
+              {/* Grid Pattern */}
+              <div className="absolute inset-0" style={{
+                backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                backgroundSize: '20px 20px'
+              }}></div>
             </div>
+            
+            {/* Shine Effect on Hover */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
           </div>
+          
+          {/* Large Category Icon */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.div 
+              className="text-8xl filter drop-shadow-2xl"
+              animate={{ 
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, -2, 0]
+              }}
+              transition={{ 
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              {data.icon}
+            </motion.div>
+          </div>
+          
+          {/* Top Gradient Overlay for better badge visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
           
           {/* Category Badge */}
           <div className="absolute top-4 left-4 z-10">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-gray-900 shadow-lg">
-              {categoryIcons[category]} {categoryNames[category]}
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-bold bg-white text-gray-900 shadow-xl">
+              <span className="mr-2">{data.icon}</span>
+              {categoryNames[category]}
             </span>
           </div>
           
           {/* Read Time */}
           <div className="absolute top-4 right-4 z-10">
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-gray-900 shadow-lg">
-              ⏱️ {readTime} min
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-xs font-bold bg-white/95 backdrop-blur-sm text-gray-900 shadow-xl">
+              <span className="mr-1.5">⏱️</span>
+              {readTime} min
             </span>
           </div>
+          
+          {/* Bottom Info Bar */}
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-white/0 via-white/50 to-white/0"></div>
         </div>
       </Link>
       
-      <div className="p-8 flex flex-col flex-grow">
+      <div className="p-8 flex flex-col flex-grow bg-white">
         {/* Title */}
         <Link href={`/troubleshooting/${category}/${slug}`}>
           <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-200 line-clamp-2 leading-tight">
@@ -137,16 +155,19 @@ export default function GuideCard({
         
         {/* Footer */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <time className="text-sm text-gray-500 font-medium" dateTime={date}>
+          <time className="text-sm text-gray-500 font-medium flex items-center" dateTime={date}>
+            <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
             {format(new Date(date), 'MMM dd, yyyy')}
           </time>
           <Link
             href={`/troubleshooting/${category}/${slug}`}
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm group-hover:translate-x-1 transition-all duration-200"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm transition-all duration-200"
           >
-            Read More
+            Read Guide
             <svg
-              className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+              className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -155,7 +176,7 @@ export default function GuideCard({
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M9 5l7 7-7 7"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>
           </Link>
