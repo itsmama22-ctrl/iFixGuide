@@ -29,39 +29,42 @@ export default function PostCard({
     'ios-updates': 'iOS Updates',
   }
 
-  // Simple image mapping - guaranteed to work
-  const getImageUrl = (category: string, slug: string) => {
-    const imageMap: { [key: string]: string } = {
-      'iphone': 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&h=600&fit=crop&crop=center',
-      'battery': 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&crop=center',
-      'connectivity': 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop&crop=center',
-      'camera': 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&h=600&fit=crop&crop=center',
-      'app-issues': 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&h=600&fit=crop&crop=center',
-      'ios-updates': 'https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&h=600&fit=crop&crop=center'
-    }
-    return imageMap[category] || imageMap['iphone']
-  }
 
   return (
     <article className="card overflow-hidden h-full flex flex-col">
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
         <div className="relative h-48 overflow-hidden">
-          <img
-            src={getImageUrl(category, slug)}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-            <div className="text-white text-center p-4">
-              <div className="text-4xl mb-2">
-                {category === 'iphone' && '📱'}
-                {category === 'battery' && '🔋'}
-                {category === 'connectivity' && '📡'}
-                {category === 'camera' && '📷'}
-                {category === 'app-issues' && '📲'}
-                {category === 'ios-updates' && '⚙️'}
+          {/* Gradient background with category colors */}
+          <div className={`w-full h-full ${
+            category === 'iphone' ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
+            category === 'battery' ? 'bg-gradient-to-br from-green-500 to-green-700' :
+            category === 'connectivity' ? 'bg-gradient-to-br from-purple-500 to-purple-700' :
+            category === 'camera' ? 'bg-gradient-to-br from-yellow-500 to-yellow-700' :
+            category === 'app-issues' ? 'bg-gradient-to-br from-red-500 to-red-700' :
+            'bg-gradient-to-br from-cyan-500 to-cyan-700'
+          }`}>
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-white text-center p-4">
+                <div className="text-4xl mb-2">
+                  {category === 'iphone' && '📱'}
+                  {category === 'battery' && '🔋'}
+                  {category === 'connectivity' && '📡'}
+                  {category === 'camera' && '📷'}
+                  {category === 'app-issues' && '📲'}
+                  {category === 'ios-updates' && '⚙️'}
+                </div>
+                <div className="text-sm font-medium bg-white/20 px-3 py-1 rounded-full">
+                  {categoryNames[category] || category}
+                </div>
+                <div className="text-xs mt-2 opacity-80">
+                  {category === 'iphone' && 'iPhone Repair & Troubleshooting'}
+                  {category === 'battery' && 'Battery & Charging Issues'}
+                  {category === 'connectivity' && 'WiFi, Bluetooth & Network'}
+                  {category === 'camera' && 'Camera & Photo Problems'}
+                  {category === 'app-issues' && 'App Crashes & Software'}
+                  {category === 'ios-updates' && 'iOS Updates & System'}
+                </div>
               </div>
-              <div className="text-sm font-medium opacity-90 bg-black/50 px-2 py-1 rounded">{categoryNames[category] || category}</div>
             </div>
           </div>
         </div>

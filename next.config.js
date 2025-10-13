@@ -8,16 +8,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        port: '',
-        pathname: '/**',
-      },
-    ],
-    unoptimized: true, // Disable image optimization to fix loading issues
+    unoptimized: true,
   },
   compress: true,
   poweredByHeader: false,
