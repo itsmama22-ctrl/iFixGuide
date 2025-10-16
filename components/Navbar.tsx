@@ -112,13 +112,13 @@ export default function Navbar() {
         <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="py-4 space-y-2">
+          <div className="bg-white/95 backdrop-blur-md shadow-lg rounded-lg mt-2 border border-gray-100 py-2 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                className={`block px-3 py-2 mx-2 rounded-lg text-sm font-medium transition-colors ${
                   pathname === item.href
                     ? 'bg-blue-100 text-blue-600'
                     : 'text-gray-700 hover:bg-gray-100 hover:text-blue-600'
@@ -127,11 +127,11 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-gray-200">
+            <div className="pt-2 mt-2 border-t border-gray-200">
               <Link
                 href="/troubleshooting"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full btn-primary text-center py-3 rounded-lg font-semibold"
+                className="block mx-2 btn-primary text-center py-2 rounded-lg font-semibold"
               >
                 <span className="mr-2">🚀</span>
                 Start Fixing
