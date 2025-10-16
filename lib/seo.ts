@@ -181,12 +181,84 @@ export function generateOrganizationSchema() {
     url: baseUrl,
     logo: `${baseUrl}/images/logo.png`,
     description: 'Expert troubleshooting guides for iPhone and iOS problems',
-    sameAs: [],
+    sameAs: [
+      'https://twitter.com/ifixguide',
+      'https://github.com/itsmama22-ctrl/iFixGuide'
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Support',
       email: 'contact.ifixguide@gmail.com',
     },
+    founder: {
+      '@type': 'Organization',
+      name: 'iFixGuide Team'
+    },
+    foundingDate: '2025',
+    numberOfEmployees: '1-10',
+    areaServed: 'Worldwide',
+    knowsAbout: [
+      'iPhone troubleshooting',
+      'iOS problem solving',
+      'Mobile device repair',
+      'Apple device support'
+    ]
+  }
+}
+
+export function generateWebsiteSchema() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ifixguide.com'
+  
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'iFixGuide',
+    url: baseUrl,
+    description: 'Expert troubleshooting guides for iPhone and iOS problems',
+    publisher: {
+      '@type': 'Organization',
+      name: 'iFixGuide',
+      url: baseUrl
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${baseUrl}/search?q={search_term_string}`
+      },
+      'query-input': 'required name=search_term_string'
+    }
+  }
+}
+
+export function generateHowToSchema({
+  title,
+  description,
+  steps,
+  totalTime,
+  difficulty = 'Beginner'
+}: {
+  title: string
+  description: string
+  steps: { name: string; text: string }[]
+  totalTime: string
+  difficulty?: 'Beginner' | 'Intermediate' | 'Advanced'
+}) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ifixguide.com'
+  
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: title,
+    description: description,
+    totalTime: totalTime,
+    difficulty: difficulty,
+    step: steps.map((step, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: step.name,
+      text: step.text
+    }))
   }
 }
 
