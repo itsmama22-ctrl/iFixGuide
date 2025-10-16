@@ -164,17 +164,16 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPosts.map((post, index) => (
-              <FadeIn key={post.slug} delay={index * 100}>
-                <GuideCard
-                  title={post.title}
-                  description={post.description}
-                  date={post.date}
-                  category={post.category}
-                  slug={post.slug}
-                  image={post.image}
-                  readTime={post.readTime}
-                />
-              </FadeIn>
+              <GuideCard
+                key={post.slug}
+                title={post.title}
+                description={post.description}
+                date={post.date}
+                category={post.category}
+                slug={post.slug}
+                image={post.image}
+                readTime={post.readTime}
+              />
             ))}
           </div>
 

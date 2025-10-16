@@ -78,14 +78,7 @@ export default function GuideCard({
   const imageUrl = image && image.startsWith('http') ? image : getCategoryImage(category)
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      whileHover={{ y: -8 }}
-      className="card overflow-hidden h-full flex flex-col group"
-    >
+    <article className="card overflow-hidden h-full flex flex-col group">
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
         <div className="relative h-56 overflow-hidden bg-gray-200">
           {/* Real Image */}
@@ -160,6 +153,6 @@ export default function GuideCard({
           </Link>
         </div>
       </div>
-    </motion.article>
+    </article>
   )
 }
