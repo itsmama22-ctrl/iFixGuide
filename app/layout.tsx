@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description: 'Expert troubleshooting guides for iPhone and iOS problems.',
         images: [
           {
-            url: '/images/og-default.svg',
+            url: '/images/og-default.jpg',
             width: 1200,
             height: 630,
             alt: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
     description: 'Expert troubleshooting guides for iPhone and iOS problems.',
-    images: ['/images/og-default.svg'],
+    images: ['/images/og-default.jpg'],
     creator: '@ifixguide',
     site: '@ifixguide',
   },
