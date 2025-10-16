@@ -71,11 +71,13 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    other: {
+      'msvalidate.01': '985E695A86CFBD6A4F3137977C051AD6',
+    },
   },
   category: 'Technology',
   classification: 'iPhone and iOS troubleshooting guides',
   other: {
-    'msvalidate.01': '985E695A86CFBD6A4F3137977C051AD6',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
     'apple-mobile-web-app-title': 'iFixGuide',
