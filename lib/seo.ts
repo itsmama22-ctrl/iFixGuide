@@ -27,7 +27,7 @@ export function generateSEO({
 }: SEOProps): Metadata {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ifixguide.com'
   const fullUrl = url ? `${baseUrl}${url}` : baseUrl
-  const ogImage = image || `${baseUrl}/images/og-default.jpg`
+  const ogImage = image || `${baseUrl}/images/og-default.svg`
 
   const openGraphData: any = {
     type,

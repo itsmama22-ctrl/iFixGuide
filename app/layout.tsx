@@ -39,20 +39,20 @@ export const metadata: Metadata = {
     siteName: 'iFixGuide',
     title: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
     description: 'Expert troubleshooting guides for iPhone and iOS problems.',
-    images: [
-      {
-        url: '/images/og-default.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
-      }
-    ],
+        images: [
+          {
+            url: '/images/og-default.svg',
+            width: 1200,
+            height: 630,
+            alt: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
+          }
+        ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
     description: 'Expert troubleshooting guides for iPhone and iOS problems.',
-    images: ['/images/og-default.jpg'],
+    images: ['/images/og-default.svg'],
     creator: '@ifixguide',
     site: '@ifixguide',
   },
