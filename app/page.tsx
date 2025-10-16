@@ -1,5 +1,4 @@
 import { getAllPosts } from '@/lib/posts'
-import { categories } from '@/lib/categories'
 import { POSTS_CONFIG } from '@/lib/constants'
 import GuideCard from '@/components/GuideCard'
 import Link from 'next/link'
@@ -7,11 +6,6 @@ import Link from 'next/link'
 export default function HomePage() {
   const posts = getAllPosts()
   const featuredPosts = posts.slice(0, POSTS_CONFIG.featuredPostsCount)
-  
-  const categoriesWithCount = categories.map(cat => ({
-    ...cat,
-    count: posts.filter(p => p.category === cat.id).length
-  }))
 
   return (
     <div className="min-h-screen bg-white">
@@ -85,57 +79,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Choose Your
-                <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Problem Category
-                </span>
-              </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Browse our comprehensive guides organized by problem type for quick solutions
-              </p>
-            </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categoriesWithCount.map((category, index) => (
-              <Link
-                key={category.slug} 
-                  href={`/troubleshooting/${category.slug}`}
-                  className="group block"
-                >
-                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-gray-200">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${category.gradient} text-white text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      {category.icon}
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                      {category.name}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 leading-relaxed">
-                      {category.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm font-semibold text-gray-500">
-                        {category.count} Guides
-                      </span>
-                      <div className="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
-                        <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Featured Posts Section */}
       <section className="py-20 bg-white">
