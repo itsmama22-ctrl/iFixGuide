@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { format } from 'date-fns'
 import { motion } from 'framer-motion'
 
@@ -88,10 +89,12 @@ export default function GuideCard({
       <Link href={`/troubleshooting/${category}/${slug}`} className="block">
         <div className="relative h-56 overflow-hidden bg-gray-200">
           {/* Real Image */}
-          <img
+          <Image
             src={imageUrl}
             alt={title}
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           
           {/* Dark overlay for text readability */}

@@ -2,6 +2,7 @@ import { getAllPosts } from '@/lib/posts'
 import { categories } from '@/lib/categories'
 import { POSTS_CONFIG } from '@/lib/constants'
 import FadeIn from '@/components/FadeIn'
+import GuideCard from '@/components/GuideCard'
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -164,38 +165,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredPosts.map((post, index) => (
               <FadeIn key={post.slug} delay={index * 100}>
-                <Link 
-                  href={`/troubleshooting/${post.category}/${post.slug}`}
-                  className="group block"
-                >
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-gray-200 h-full">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800">
-                        {post.category}
-                      </div>
-                      <span className="text-sm text-gray-500">{post.readTime} min</span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
-                      {post.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">
-                        {new Date(post.date).toLocaleDateString()}
-                      </span>
-                      <div className="w-8 h-8 rounded-full bg-gray-100 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
-                        <svg className="w-4 h-4 text-gray-400 group-hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                <GuideCard
+                  title={post.title}
+                  description={post.description}
+                  date={post.date}
+                  category={post.category}
+                  slug={post.slug}
+                  image={post.image}
+                  readTime={post.readTime}
+                />
               </FadeIn>
             ))}
           </div>
