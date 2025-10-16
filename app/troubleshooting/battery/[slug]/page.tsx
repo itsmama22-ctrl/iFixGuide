@@ -4,20 +4,19 @@ import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/
 import { getImageForPost } from '@/lib/images'
 import { getCategoryById } from '@/lib/categories'
 import RelatedPosts from '@/components/RelatedPosts'
-import { remark } from 'remark'
-import html from 'remark-html'
+import { marked } from 'marked'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
-  const iPhonePosts = posts.filter(post => post.category === 'iphone')
+  const batteryPosts = posts.filter(post => post.category === 'battery')
   
-  return iPhonePosts.map((post) => ({
+  return batteryPosts.map((post) => ({
     slug: post.slug,
   }))
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug, 'iphone')
+  const post = getPostBySlug('battery', params.slug)
   
   if (!post) {
     return {}
@@ -31,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function iPhonePostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug, 'iphone')
+  const post = getPostBySlug('battery', params.slug)
 
   if (!post) {
     notFound()
@@ -42,10 +41,7 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
   const postImage = getImageForPost(post.category, post.slug)
 
   // Convert markdown to HTML
-  const processedContent = await remark()
-    .use(html, { sanitize: false })
-    .process(post.content)
-  const contentHtml = processedContent.toString()
+  const contentHtml = marked(post.content)
 
   // Get related posts
   const relatedPosts = getRelatedPosts(post)
@@ -58,14 +54,14 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
     modifiedTime: post.date,
     author: post.author,
     image: postImage,
-    url: `/troubleshooting/iphone/${params.slug}`,
+    url: `/troubleshooting/battery/${params.slug}`,
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Troubleshooting', url: '/troubleshooting' },
-    { name: 'iPhone', url: '/troubleshooting/iphone' },
-    { name: post.title, url: `/troubleshooting/iphone/${params.slug}` },
+    { name: 'Battery', url: '/troubleshooting/battery' },
+    { name: post.title, url: `/troubleshooting/battery/${params.slug}` },
   ])
 
   return (

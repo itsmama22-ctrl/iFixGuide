@@ -4,8 +4,7 @@ import { generateSEO, generateArticleSchema, generateBreadcrumbSchema } from '@/
 import { getImageForPost } from '@/lib/images'
 import { getCategoryById } from '@/lib/categories'
 import RelatedPosts from '@/components/RelatedPosts'
-import { remark } from 'remark'
-import html from 'remark-html'
+import { marked } from 'marked'
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -17,7 +16,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug, 'iphone')
+  const post = getPostBySlug('iphone', params.slug)
   
   if (!post) {
     return {}
@@ -31,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function iPhonePostPage({ params }: { params: { slug: string } }) {
-  const post = getPostBySlug(params.slug, 'iphone')
+  const post = getPostBySlug('iphone', params.slug)
 
   if (!post) {
     notFound()
@@ -42,10 +41,7 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
   const postImage = getImageForPost(post.category, post.slug)
 
   // Convert markdown to HTML
-  const processedContent = await remark()
-    .use(html, { sanitize: false })
-    .process(post.content)
-  const contentHtml = processedContent.toString()
+  const contentHtml = marked(post.content)
 
   // Get related posts
   const relatedPosts = getRelatedPosts(post)

@@ -1,5 +1,5 @@
 import { getPostsByCategory } from '@/lib/posts'
-import PostCard from '@/components/PostCard'
+import GuideCard from '@/components/GuideCard'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { generateSEO } from '@/lib/seo'
 
@@ -33,7 +33,7 @@ export default function iPhoneTroubleshooting() {
         {posts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post) => (
-              <PostCard
+              <GuideCard
                 key={post.slug}
                 title={post.title}
                 description={post.description}
