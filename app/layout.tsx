@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description: 'Expert troubleshooting guides for iPhone and iOS problems.',
         images: [
           {
-            url: '/images/og-default.jpg',
+            url: 'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop',
             width: 1200,
             height: 630,
             alt: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'iFixGuide - iPhone & iOS Troubleshooting Guides',
     description: 'Expert troubleshooting guides for iPhone and iOS problems.',
-    images: ['/images/og-default.jpg'],
+    images: ['https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop'],
     creator: '@ifixguide',
     site: '@ifixguide',
   },
