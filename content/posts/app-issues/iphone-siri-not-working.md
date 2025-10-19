@@ -1,10 +1,17 @@
 ---
-title: "Siri Not Working on iPhone? 11 Ways to Fix Voice Assistant"
-description: "Siri not responding, hearing you, or working? Fix all Siri issues on iPhone with our complete troubleshooting guide."
-date: "2026-01-04"
-publishDate: "2026-01-04"
-keywords: ["Siri not working", "Hey Siri not responding", "Siri won't listen", "fix Siri iPhone", "Siri not hearing me"]
-author: "iFixGuide Team"
+title: Siri Not Working on iPhone? 11 Ways to Fix Voice Assistant
+description: >-
+  Siri not responding, hearing you, or working? Fix all Siri issues on iPhone
+  with our complete troubleshooting guide.
+date: '2026-01-04'
+publishDate: '2025-10-19'
+keywords:
+  - Siri not working
+  - Hey Siri not responding
+  - Siri won't listen
+  - fix Siri iPhone
+  - Siri not hearing me
+author: iFixGuide Team
 ---
 
 Siri should respond to your voice commands. When not working, this guide fixes all Siri issues.

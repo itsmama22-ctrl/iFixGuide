@@ -1,10 +1,17 @@
 ---
-title: "iPhone Flash Not Working? 8 Ways to Fix Camera Flash Issues"
-description: "Camera flash won't turn on or not working? Fix iPhone flashlight and camera flash problems with our complete troubleshooting guide."
-date: "2025-10-27"
-publishDate: "2025-10-27"
-keywords: ["iPhone flash not working", "iPhone flashlight won't turn on", "camera flash not working", "fix iPhone flash", "flashlight disabled"]
-author: "iFixGuide Team"
+title: iPhone Flash Not Working? 8 Ways to Fix Camera Flash Issues
+description: >-
+  Camera flash won't turn on or not working? Fix iPhone flashlight and camera
+  flash problems with our complete troubleshooting guide.
+date: '2025-10-27'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone flash not working
+  - iPhone flashlight won't turn on
+  - camera flash not working
+  - fix iPhone flash
+  - flashlight disabled
+author: iFixGuide Team
 ---
 
 When iPhone flash stops working, you lose both the flashlight and camera flash. This guide fixes all flash-related issues on iPhone.

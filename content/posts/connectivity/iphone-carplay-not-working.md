@@ -1,10 +1,17 @@
 ---
-title: "iPhone CarPlay Not Working? 11 Ways to Fix Connection Issues"
-description: "CarPlay won't connect or not working in your car? Fix iPhone CarPlay issues with our complete troubleshooting guide for wired and wireless CarPlay."
-date: "2025-11-06"
-publishDate: "2025-11-06"
-keywords: ["iPhone CarPlay not working", "CarPlay won't connect", "fix CarPlay", "CarPlay connection issues", "wireless CarPlay problems"]
-author: "iFixGuide Team"
+title: iPhone CarPlay Not Working? 11 Ways to Fix Connection Issues
+description: >-
+  CarPlay won't connect or not working in your car? Fix iPhone CarPlay issues
+  with our complete troubleshooting guide for wired and wireless CarPlay.
+date: '2025-11-06'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone CarPlay not working
+  - CarPlay won't connect
+  - fix CarPlay
+  - CarPlay connection issues
+  - wireless CarPlay problems
+author: iFixGuide Team
 ---
 
 CarPlay makes using iPhone in your car safer and easier. When it stops working, this guide has all the solutions for both wired and wireless CarPlay issues.

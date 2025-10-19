@@ -1,10 +1,17 @@
 ---
-title: "iPhone Microphone Not Working? 10 Fixes for Call and Recording Issues"
-description: "Can't be heard during calls or recordings? Fix iPhone microphone problems with our complete troubleshooting guide for all mic issues."
-date: "2025-10-24"
-publishDate: "2025-10-24"
-keywords: ["iPhone microphone not working", "iPhone mic problems", "can't hear me on iPhone", "iPhone recording no sound", "fix iPhone microphone"]
-author: "iFixGuide Team"
+title: iPhone Microphone Not Working? 10 Fixes for Call and Recording Issues
+description: >-
+  Can't be heard during calls or recordings? Fix iPhone microphone problems with
+  our complete troubleshooting guide for all mic issues.
+date: '2025-10-24'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone microphone not working
+  - iPhone mic problems
+  - can't hear me on iPhone
+  - iPhone recording no sound
+  - fix iPhone microphone
+author: iFixGuide Team
 ---
 
 When your iPhone microphone stops working, people can't hear you during calls, voice memos fail, and Siri won't respond. This guide covers all solutions to fix microphone issues.

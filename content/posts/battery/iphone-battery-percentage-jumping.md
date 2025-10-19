@@ -1,10 +1,17 @@
 ---
-title: "iPhone Battery Percentage Jumping? How to Fix Incorrect Battery"
-description: "Is your iPhone battery percentage jumping randomly or showing wrong percentage? Fix battery calibration issues with our troubleshooting guide."
-date: "2025-11-03"
-publishDate: "2025-11-03"
-keywords: ["iPhone battery percentage jumping", "battery percentage wrong", "iPhone battery glitch", "calibrate iPhone battery", "fix battery percentage"]
-author: "iFixGuide Team"
+title: iPhone Battery Percentage Jumping? How to Fix Incorrect Battery
+description: >-
+  Is your iPhone battery percentage jumping randomly or showing wrong
+  percentage? Fix battery calibration issues with our troubleshooting guide.
+date: '2025-11-03'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone battery percentage jumping
+  - battery percentage wrong
+  - iPhone battery glitch
+  - calibrate iPhone battery
+  - fix battery percentage
+author: iFixGuide Team
 ---
 
 iPhone battery percentage jumping from 50% to 20%, or showing 30% then dying, indicates calibration issues. This guide fixes inaccurate battery readings.

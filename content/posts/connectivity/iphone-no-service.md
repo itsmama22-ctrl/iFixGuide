@@ -1,10 +1,17 @@
 ---
-title: "iPhone Says 'No Service'? 12 Ways to Fix Cellular Signal"
-description: "iPhone showing 'No Service' or 'Searching'? Fix cellular signal problems and restore network connection with our troubleshooting guide."
-date: "2025-11-17"
-publishDate: "2025-11-17"
-keywords: ["iPhone no service", "iPhone searching for service", "no signal iPhone", "fix no service", "iPhone cellular not working"]
-author: "iFixGuide Team"
+title: iPhone Says 'No Service'? 12 Ways to Fix Cellular Signal
+description: >-
+  iPhone showing 'No Service' or 'Searching'? Fix cellular signal problems and
+  restore network connection with our troubleshooting guide.
+date: '2025-11-17'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone no service
+  - iPhone searching for service
+  - no signal iPhone
+  - fix no service
+  - iPhone cellular not working
+author: iFixGuide Team
 ---
 
 "No Service" on iPhone means you can't make calls, text, or use cellular data. This guide fixes all signal issues.

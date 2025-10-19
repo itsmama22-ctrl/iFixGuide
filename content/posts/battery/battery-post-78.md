@@ -1,10 +1,17 @@
 ---
-title: "iPhone Charging Port Wet? How to Dry and Fix Water Alert"
-description: "Got 'Liquid Detected' or charging port wet warning? Learn how to safely dry iPhone charging port and restore charging."
-date: "2025-12-15"
-publishDate: "2025-12-15"
-keywords: ["iPhone charging port wet", "liquid detected iPhone", "charging port water", "dry charging port", "moisture detected"]
-author: "iFixGuide Team"
+title: iPhone Charging Port Wet? How to Dry and Fix Water Alert
+description: >-
+  Got 'Liquid Detected' or charging port wet warning? Learn how to safely dry
+  iPhone charging port and restore charging.
+date: '2025-12-15'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone charging port wet
+  - liquid detected iPhone
+  - charging port water
+  - dry charging port
+  - moisture detected
+author: iFixGuide Team
 ---
 
 'Liquid Detected in Lightning Connector' or 'Charging Not Available' warnings prevent charging. Here's how to fix it safely.

@@ -1,10 +1,17 @@
 ---
-title: "iPhone WiFi Greyed Out? 7 Fixes for Disabled WiFi"
-description: "WiFi option greyed out and can't turn on? Fix disabled WiFi on iPhone with our troubleshooting guide for this serious issue."
-date: "2026-01-07"
-publishDate: "2026-01-07"  
-keywords: ["iPhone WiFi greyed out", "can't turn on WiFi", "WiFi disabled iPhone", "fix greyed WiFi", "WiFi not available"]
-author: "iFixGuide Team"
+title: iPhone WiFi Greyed Out? 7 Fixes for Disabled WiFi
+description: >-
+  WiFi option greyed out and can't turn on? Fix disabled WiFi on iPhone with our
+  troubleshooting guide for this serious issue.
+date: '2026-01-07'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone WiFi greyed out
+  - can't turn on WiFi
+  - WiFi disabled iPhone
+  - fix greyed WiFi
+  - WiFi not available
+author: iFixGuide Team
 ---
 
 WiFi greyed out is serious issue often indicating hardware failure. This guide provides solutions.

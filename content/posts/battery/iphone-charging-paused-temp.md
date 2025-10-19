@@ -1,10 +1,17 @@
 ---
-title: "iPhone 'Charging Paused: Temperature' Alert? How to Fix"
-description: "Got 'Charging On Hold' temperature warning? Learn why iPhone stops charging when hot and how to safely resume charging."
-date: "2026-01-09"
-publishDate: "2026-01-09"
-keywords: ["iPhone charging paused temperature", "charging on hold", "iPhone too hot to charge", "temperature warning charging", "fix charging paused"]
-author: "iFixGuide Team"
+title: 'iPhone ''Charging Paused: Temperature'' Alert? How to Fix'
+description: >-
+  Got 'Charging On Hold' temperature warning? Learn why iPhone stops charging
+  when hot and how to safely resume charging.
+date: '2026-01-09'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone charging paused temperature
+  - charging on hold
+  - iPhone too hot to charge
+  - temperature warning charging
+  - fix charging paused
+author: iFixGuide Team
 ---
 
 'Charging paused. iPhone needs to cool down' protects battery from heat damage. This guide gets charging resumed safely.

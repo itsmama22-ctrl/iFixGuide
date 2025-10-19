@@ -1,10 +1,17 @@
 ---
-title: "AirPods Won't Connect to iPhone? 12 Quick Fixes That Work"
-description: "Can't connect AirPods to iPhone? Fix connection issues, pairing problems, and audio cutting out with our complete AirPods troubleshooting guide."
-date: "2025-11-08"
-publishDate: "2025-11-08"
-keywords: ["AirPods won't connect", "AirPods not connecting iPhone", "fix AirPods connection", "AirPods pairing issues", "AirPods disconnecting"]
-author: "iFixGuide Team"
+title: AirPods Won't Connect to iPhone? 12 Quick Fixes That Work
+description: >-
+  Can't connect AirPods to iPhone? Fix connection issues, pairing problems, and
+  audio cutting out with our complete AirPods troubleshooting guide.
+date: '2025-11-08'
+publishDate: '2025-10-19'
+keywords:
+  - AirPods won't connect
+  - AirPods not connecting iPhone
+  - fix AirPods connection
+  - AirPods pairing issues
+  - AirPods disconnecting
+author: iFixGuide Team
 ---
 
 AirPods should connect seamlessly, but sometimes they won't pair, keep disconnecting, or audio cuts out. This guide fixes all AirPods connection issues.

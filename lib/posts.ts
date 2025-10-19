@@ -58,11 +58,12 @@ export function getAllPosts(): Post[] {
     allPosts.push(...posts)
   })
 
-  // Filter posts based on publish date
+  // Filter posts based on publish date (UTC timezone handling)
   const now = new Date()
   const publishedPosts = allPosts.filter(post => {
-    const publishDate = new Date(post.publishDate)
-    return publishDate <= now
+    const publishDate = new Date(post.publishDate + 'T00:00:00.000Z') // Ensure UTC comparison
+    const currentDate = new Date(now.getFullYear(), now.getMonth(), now.getDate()) // Reset time to start of day
+    return publishDate <= currentDate
   })
 
   // Sort by date descending
@@ -118,6 +119,51 @@ export function getRelatedPosts(currentPost: Post, limit: number = 3): Post[] {
   }
 
   return sameCategoryPosts.slice(0, limit)
+}
+
+export function getAllPostsIncludingScheduled(): Post[] {
+  const categories = ['iphone', 'battery', 'connectivity', 'camera', 'app-issues', 'ios-updates']
+  const allPosts: Post[] = []
+
+  categories.forEach(category => {
+    const categoryPath = path.join(postsDirectory, category)
+    
+    if (!fs.existsSync(categoryPath)) {
+      return
+    }
+
+    const fileNames = fs.readdirSync(categoryPath)
+    
+    const posts = fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map(fileName => {
+        const slug = fileName.replace(/\.md$/, '')
+        const fullPath = path.join(categoryPath, fileName)
+        const fileContents = fs.readFileSync(fullPath, 'utf8')
+        const { data, content } = matter(fileContents)
+
+        return {
+          slug,
+          title: data.title,
+          description: data.description,
+          date: data.date,
+          publishDate: data.publishDate || data.date,
+          category,
+          keywords: data.keywords || [],
+          image: data.image || getImageForPost(category, slug),
+          content,
+          readTime: Math.ceil(content.split(/\s+/).length / 200),
+          author: data.author || 'iFixGuide Team',
+        }
+      })
+
+    allPosts.push(...posts)
+  })
+
+  // Sort by date descending (no filtering for scheduled posts)
+  return allPosts.sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
 }
 
 export function searchPosts(query: string): Post[] {

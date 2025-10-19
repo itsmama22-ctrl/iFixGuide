@@ -1,10 +1,17 @@
 ---
-title: "iPhone Wireless Charging Not Working? 10 Quick Fixes"
-description: "Qi wireless charging not working on iPhone? Fix wireless charging issues with our troubleshooting guide for all iPhone models."
-date: "2025-11-16"
-publishDate: "2025-11-16"
-keywords: ["iPhone wireless charging not working", "Qi charging problems", "wireless charger not working", "fix wireless charging", "iPhone won't charge wirelessly"]
-author: "iFixGuide Team"
+title: iPhone Wireless Charging Not Working? 10 Quick Fixes
+description: >-
+  Qi wireless charging not working on iPhone? Fix wireless charging issues with
+  our troubleshooting guide for all iPhone models.
+date: '2025-11-16'
+publishDate: '2025-10-19'
+keywords:
+  - iPhone wireless charging not working
+  - Qi charging problems
+  - wireless charger not working
+  - fix wireless charging
+  - iPhone won't charge wirelessly
+author: iFixGuide Team
 ---
 
 Wireless charging makes charging effortless, but when it stops working, this guide has the solutions.
