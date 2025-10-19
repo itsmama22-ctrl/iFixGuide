@@ -62,8 +62,8 @@ export function getAllPosts(): Post[] {
   const now = new Date()
   const publishedPosts = allPosts.filter(post => {
     const publishDate = new Date(post.publishDate + 'T00:00:00.000Z') // Ensure UTC comparison
-    const currentDate = new Date(now.getFullYear(), now.getMonth(), now.getDate()) // Reset time to start of day
-    return publishDate <= currentDate
+    const currentDateUTC = new Date(now.toISOString().split('T')[0] + 'T00:00:00.000Z') // Current date in UTC
+    return publishDate <= currentDateUTC
   })
 
   // Sort by date descending
