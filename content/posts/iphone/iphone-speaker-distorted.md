@@ -1,17 +1,10 @@
 ---
-title: iPhone Speaker Distorted or Crackling? 9 Ways to Fix Audio Issues
-description: >-
-  Is your iPhone speaker crackling, buzzing, or sounding distorted? Fix speaker
-  audio quality issues with our complete troubleshooting guide.
-date: '2025-10-30'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone speaker distorted
-  - iPhone crackling sound
-  - iPhone speaker buzzing
-  - fix iPhone audio
-  - speaker sounds weird
-author: iFixGuide Team
+title: "iPhone Speaker Distorted or Crackling? 9 Ways to Fix Audio Issues"
+description: "Is your iPhone speaker crackling, buzzing, or sounding distorted? Fix speaker audio quality issues with our complete troubleshooting guide."
+date: "2025-10-30"
+publishDate: "2025-10-30"
+keywords: ["iPhone speaker distorted", "iPhone crackling sound", "iPhone speaker buzzing", "fix iPhone audio", "speaker sounds weird"]
+author: "iFixGuide Team"
 ---
 
 Distorted, crackling, or buzzing iPhone speakers ruin calls, music, and videos. This guide fixes all speaker audio quality problems.

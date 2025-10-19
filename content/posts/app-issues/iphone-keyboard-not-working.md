@@ -1,17 +1,10 @@
 ---
-title: iPhone Keyboard Not Working? 10 Fixes for Typing Problems
-description: >-
-  Is your iPhone keyboard not appearing, typing wrong letters, or lagging? Fix
-  all keyboard issues with our troubleshooting guide.
-date: '2025-11-22'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone keyboard not working
-  - keyboard won't appear
-  - typing problems iPhone
-  - keyboard lagging
-  - fix iPhone keyboard
-author: iFixGuide Team
+title: "iPhone Keyboard Not Working? 10 Fixes for Typing Problems"
+description: "Is your iPhone keyboard not appearing, typing wrong letters, or lagging? Fix all keyboard issues with our troubleshooting guide."
+date: "2025-11-22"
+publishDate: "2025-11-22"
+keywords: ["iPhone keyboard not working", "keyboard won't appear", "typing problems iPhone", "keyboard lagging", "fix iPhone keyboard"]
+author: "iFixGuide Team"
 ---
 
 When iPhone keyboard stops working, you can't type messages, search, or input text. This guide fixes all keyboard problems.

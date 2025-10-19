@@ -1,17 +1,10 @@
 ---
-title: iPhone GPS Not Working? 10 Ways to Fix Location Problems
-description: >-
-  Is your iPhone GPS inaccurate or not working? Fix location services issues,
-  improve GPS accuracy, and solve navigation problems.
-date: '2025-11-02'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone GPS not working
-  - iPhone location wrong
-  - GPS accuracy iPhone
-  - fix GPS iPhone
-  - location services not working
-author: iFixGuide Team
+title: "iPhone GPS Not Working? 10 Ways to Fix Location Problems"
+description: "Is your iPhone GPS inaccurate or not working? Fix location services issues, improve GPS accuracy, and solve navigation problems."
+date: "2025-11-02"
+publishDate: "2025-11-02"
+keywords: ["iPhone GPS not working", "iPhone location wrong", "GPS accuracy iPhone", "fix GPS iPhone", "location services not working"]
+author: "iFixGuide Team"
 ---
 
 GPS and location services are essential for maps, navigation, and location-based apps. When iPhone GPS stops working or shows wrong location, this guide has the solutions.

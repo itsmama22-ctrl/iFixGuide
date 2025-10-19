@@ -1,17 +1,10 @@
 ---
-title: iPhone Charging Slowly? 10 Ways to Speed Up Charging Time
-description: >-
-  Is your iPhone taking forever to charge? Fix slow charging issues and learn
-  how to make your iPhone charge faster with our troubleshooting guide.
-date: '2025-10-31'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone charging slowly
-  - iPhone slow charge
-  - speed up iPhone charging
-  - iPhone takes forever to charge
-  - fix slow charging
-author: iFixGuide Team
+title: "iPhone Charging Slowly? 10 Ways to Speed Up Charging Time"
+description: "Is your iPhone taking forever to charge? Fix slow charging issues and learn how to make your iPhone charge faster with our troubleshooting guide."
+date: "2025-10-31"
+publishDate: "2025-10-31"
+keywords: ["iPhone charging slowly", "iPhone slow charge", "speed up iPhone charging", "iPhone takes forever to charge", "fix slow charging"]
+author: "iFixGuide Team"
 ---
 
 Slow iPhone charging is frustrating. If your iPhone takes hours to charge or charging seems slower than before, this guide has the solutions.

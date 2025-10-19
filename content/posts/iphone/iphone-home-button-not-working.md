@@ -1,17 +1,10 @@
 ---
-title: iPhone Home Button Not Working? 10 Fixes You Need to Try
-description: >-
-  Is your iPhone Home button stuck, unresponsive, or broken? Fix Home button
-  issues with our complete troubleshooting guide for all iPhone models.
-date: '2025-11-07'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone Home button not working
-  - Home button stuck
-  - Home button broken
-  - fix Home button
-  - Home button unresponsive
-author: iFixGuide Team
+title: "iPhone Home Button Not Working? 10 Fixes You Need to Try"
+description: "Is your iPhone Home button stuck, unresponsive, or broken? Fix Home button issues with our complete troubleshooting guide for all iPhone models."
+date: "2025-11-07"
+publishDate: "2025-11-07"
+keywords: ["iPhone Home button not working", "Home button stuck", "Home button broken", "fix Home button", "Home button unresponsive"]
+author: "iFixGuide Team"
 ---
 
 The Home button is essential on older iPhones. When it stops working, navigation becomes difficult. This guide fixes all Home button problems.

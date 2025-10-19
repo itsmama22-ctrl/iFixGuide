@@ -7,7 +7,7 @@ export async function GET() {
     const allPosts = getAllPostsIncludingScheduled()
     
     const now = new Date()
-    const currentDate = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    const currentDate = new Date(now.toISOString().split('T')[0] + 'T00:00:00.000Z')
     
     return NextResponse.json({
       status: 'success',

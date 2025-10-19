@@ -1,17 +1,10 @@
 ---
-title: iPhone Photos Look Bad? 10 Ways to Improve Photo Quality
-description: >-
-  Are your iPhone photos grainy, blurry, or poor quality? Fix image quality
-  issues and take better photos with our guide.
-date: '2026-01-02'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone photo quality poor
-  - photos look bad
-  - grainy iPhone photos
-  - improve photo quality
-  - better iPhone photos
-author: iFixGuide Team
+title: "iPhone Photos Look Bad? 10 Ways to Improve Photo Quality"
+description: "Are your iPhone photos grainy, blurry, or poor quality? Fix image quality issues and take better photos with our guide."
+date: "2026-01-02"
+publishDate: "2026-01-02"
+keywords: ["iPhone photo quality poor", "photos look bad", "grainy iPhone photos", "improve photo quality", "better iPhone photos"]
+author: "iFixGuide Team"
 ---
 
 iPhone takes amazing photos when configured properly. If your photos look bad, this guide improves quality.

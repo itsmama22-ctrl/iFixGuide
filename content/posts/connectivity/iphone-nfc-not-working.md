@@ -1,17 +1,10 @@
 ---
-title: iPhone NFC Not Working? 7 Ways to Fix Apple Pay and Tags
-description: >-
-  NFC not working for Apple Pay or NFC tags? Fix iPhone NFC issues with our
-  complete troubleshooting guide.
-date: '2026-01-03'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone NFC not working
-  - Apple Pay not working
-  - NFC tags not reading
-  - fix NFC iPhone
-  - contactless payment failed
-author: iFixGuide Team
+title: "iPhone NFC Not Working? 7 Ways to Fix Apple Pay and Tags"
+description: "NFC not working for Apple Pay or NFC tags? Fix iPhone NFC issues with our complete troubleshooting guide."
+date: "2026-01-03"
+publishDate: "2026-01-03"
+keywords: ["iPhone NFC not working", "Apple Pay not working", "NFC tags not reading", "fix NFC iPhone", "contactless payment failed"]
+author: "iFixGuide Team"
 ---
 
 NFC enables Apple Pay and NFC tag reading. When not working, this guide has solutions.

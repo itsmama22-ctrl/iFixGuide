@@ -1,17 +1,10 @@
 ---
-title: iPhone Screen Flickering? 10 Ways to Fix Display Flashing Issues
-description: >-
-  Is your iPhone screen flickering, flashing, or strobing? Fix display issues
-  with our comprehensive troubleshooting guide.
-date: '2025-11-14'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone screen flickering
-  - iPhone display flashing
-  - screen strobing iPhone
-  - fix flickering screen
-  - iPhone screen glitching
-author: iFixGuide Team
+title: "iPhone Screen Flickering? 10 Ways to Fix Display Flashing Issues"
+description: "Is your iPhone screen flickering, flashing, or strobing? Fix display issues with our comprehensive troubleshooting guide."
+date: "2025-11-14"
+publishDate: "2025-11-14"
+keywords: ["iPhone screen flickering", "iPhone display flashing", "screen strobing iPhone", "fix flickering screen", "iPhone screen glitching"]
+author: "iFixGuide Team"
 ---
 
 iPhone screen flickering or flashing makes your device unusable. This guide fixes all display flickering issues.

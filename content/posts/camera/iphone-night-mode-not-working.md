@@ -1,17 +1,10 @@
 ---
-title: iPhone Night Mode Not Working? 7 Ways to Fix Low-Light Photos
-description: >-
-  Can't use Night mode or photos too dark? Fix iPhone Night mode issues and
-  improve low-light photography with our guide.
-date: '2025-11-19'
-publishDate: '2025-10-19'
-keywords:
-  - iPhone Night mode not working
-  - Night mode unavailable
-  - low light photos iPhone
-  - fix Night mode
-  - dark photos iPhone
-author: iFixGuide Team
+title: "iPhone Night Mode Not Working? 7 Ways to Fix Low-Light Photos"
+description: "Can't use Night mode or photos too dark? Fix iPhone Night mode issues and improve low-light photography with our guide."
+date: "2025-11-19"
+publishDate: "2025-11-19"
+keywords: ["iPhone Night mode not working", "Night mode unavailable", "low light photos iPhone", "fix Night mode", "dark photos iPhone"]
+author: "iFixGuide Team"
 ---
 
 Night mode captures amazing low-light photos. When unavailable or not working, this guide fixes it.
