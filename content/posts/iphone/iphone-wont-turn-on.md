@@ -1,8 +1,8 @@
 ---
 title: "iPhone Won't Turn On? 10 Ways to Fix a Dead iPhone"
 description: "Is your iPhone dead and won't turn on? Learn proven methods to revive a non-responsive iPhone, from simple fixes to advanced recovery techniques."
-date: "2024-10-14"
-publishDate: "2024-10-14"
+date: "2025-10-14"
+publishDate: "2025-10-14"
 keywords: ["iPhone won't turn on", "iPhone dead", "iPhone black screen", "iPhone not responding", "revive dead iPhone"]
 author: "iFixGuide Team"
 ---

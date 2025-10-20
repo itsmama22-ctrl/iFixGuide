@@ -1,8 +1,8 @@
 ---
 title: "iPhone Frozen? How to Force Restart and Fix Unresponsive iPhone"
 description: "Is your iPhone completely frozen and won't respond? Learn how to force restart and fix a frozen iPhone, plus prevent future freezing issues."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone frozen", "iPhone won't respond", "force restart iPhone", "iPhone stuck", "unresponsive iPhone"]
 author: "iFixGuide Team"
 ---

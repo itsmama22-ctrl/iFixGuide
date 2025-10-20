@@ -1,8 +1,8 @@
 ---
 title: "iPhone Personal Hotspot Not Working? 11 Fixes That Work"
 description: "Can't get iPhone Personal Hotspot to work? Fix connection issues, missing hotspot option, and devices that won't connect with our complete guide."
-date: "2024-10-18"
-publishDate: "2024-10-18"
+date: "2025-10-18"
+publishDate: "2025-10-18"
 keywords: ["iPhone hotspot not working", "personal hotspot missing", "hotspot won't connect", "can't find hotspot", "iPhone tethering issues"]
 author: "iFixGuide Team"
 ---

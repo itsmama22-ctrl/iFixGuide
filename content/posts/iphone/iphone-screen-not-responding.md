@@ -1,8 +1,8 @@
 ---
 title: "iPhone Screen Not Responding? 12 Ways to Fix Touch Screen Issues"
 description: "Is your iPhone touch screen frozen or unresponsive? Learn 12 proven methods to fix iPhone screen issues, from simple restarts to advanced troubleshooting."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone screen not responding", "iPhone touch screen frozen", "unresponsive iPhone screen", "iPhone screen won't work", "fix iPhone touch screen"]
 author: "iFixGuide Team"
 ---

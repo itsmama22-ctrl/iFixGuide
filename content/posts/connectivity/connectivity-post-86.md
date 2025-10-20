@@ -1,8 +1,8 @@
 ---
 title: "iPhone Airplane Mode Stuck? 8 Ways to Turn It Off"
 description: "Can't turn off Airplane Mode or toggle greyed out? Fix stuck Airplane Mode on iPhone with our troubleshooting guide."
-date: "2024-12-23"
-publishDate: "2024-12-23"
+date: "2025-12-23"
+publishDate: "2025-12-23"
 keywords: ["iPhone Airplane Mode stuck", "can't turn off Airplane Mode", "Airplane Mode greyed out", "fix Airplane Mode", "toggle not working"]
 author: "iFixGuide Team"
 ---

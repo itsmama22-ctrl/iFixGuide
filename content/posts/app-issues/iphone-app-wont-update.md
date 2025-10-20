@@ -1,8 +1,8 @@
 ---
 title: "iPhone App Won't Update? 9 Fixes for Stuck App Updates"
 description: "Can't update apps on iPhone? Fix stuck app updates, pending downloads, and App Store update problems with our troubleshooting guide."
-date: "2024-11-05"
-publishDate: "2024-11-05"
+date: "2025-11-05"
+publishDate: "2025-11-05"
 keywords: ["iPhone app won't update", "app update stuck", "can't update apps", "app update pending", "fix app updates"]
 author: "iFixGuide Team"
 ---

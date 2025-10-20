@@ -1,8 +1,8 @@
 ---
 title: "iPhone Dies at 30%? Why It Shuts Down Early and How to Fix It"
 description: "Does your iPhone die at 20-40% remaining? Learn why iPhone shuts down with battery left and how to fix unexpected shutdown issues."
-date: "2024-11-09"
-publishDate: "2024-11-09"
+date: "2025-11-09"
+publishDate: "2025-11-09"
 keywords: ["iPhone dies at 30%", "iPhone shuts down early", "unexpected shutdown", "iPhone battery dies fast", "phone dies with battery left"]
 author: "iFixGuide Team"
 ---

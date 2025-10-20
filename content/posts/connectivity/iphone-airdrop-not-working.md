@@ -1,8 +1,8 @@
 ---
 title: "AirDrop Not Working on iPhone? 12 Quick Fixes"
 description: "Can't use AirDrop to share files? Fix iPhone AirDrop issues with our complete troubleshooting guide for all connection problems."
-date: "2024-10-25"
-publishDate: "2024-10-25"
+date: "2025-10-25"
+publishDate: "2025-10-25"
 keywords: ["AirDrop not working iPhone", "iPhone AirDrop problems", "can't AirDrop", "AirDrop not showing", "fix AirDrop"]
 author: "iFixGuide Team"
 ---

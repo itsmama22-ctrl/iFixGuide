@@ -1,8 +1,8 @@
 ---
 title: "Apps Keep Crashing on iPhone? 13 Proven Fixes"
 description: "Fix app crashes on your iPhone with our comprehensive troubleshooting guide. Learn why apps crash and how to prevent future issues."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone apps crashing", "apps keep closing iPhone", "app crashes iOS", "fix app crashes", "iPhone apps won't open"]
 author: "iFixGuide Team"
 ---

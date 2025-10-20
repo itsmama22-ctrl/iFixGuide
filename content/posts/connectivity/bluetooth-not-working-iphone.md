@@ -1,8 +1,8 @@
 ---
 title: "iPhone Bluetooth Not Working? 11 Ways to Fix Connection Issues"
 description: "Fix iPhone Bluetooth problems with our complete troubleshooting guide. Learn how to resolve pairing failures, connection drops, and audio issues."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone Bluetooth not working", "iPhone won't pair Bluetooth", "Bluetooth connection problems iPhone", "fix Bluetooth iPhone", "Bluetooth keeps disconnecting"]
 author: "iFixGuide Team"
 ---

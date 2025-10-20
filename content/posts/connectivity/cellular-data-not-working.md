@@ -1,8 +1,8 @@
 ---
 title: "iPhone Cellular Data Not Working? 12 Quick Fixes"
 description: "Fix cellular data issues on iPhone with our comprehensive guide. Learn why mobile data isn't working and how to restore your connection."
-date: "2024-10-15"
-publishDate: "2024-10-15"
+date: "2025-10-15"
+publishDate: "2025-10-15"
 keywords: ["iPhone cellular data not working", "mobile data not working", "iPhone no internet", "LTE not working iPhone", "5G not working"]
 author: "iFixGuide Team"
 ---

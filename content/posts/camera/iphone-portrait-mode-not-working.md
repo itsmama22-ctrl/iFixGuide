@@ -1,8 +1,8 @@
 ---
 title: "iPhone Portrait Mode Not Working? 8 Ways to Fix It"
 description: "Can't use Portrait mode or background blur not working? Fix iPhone Portrait mode issues with our complete troubleshooting guide."
-date: "2024-11-12"
-publishDate: "2024-11-12"
+date: "2025-11-12"
+publishDate: "2025-11-12"
 keywords: ["Portrait mode not working", "iPhone Portrait mode fix", "background blur not working", "Portrait mode unavailable", "fix Portrait mode"]
 author: "iFixGuide Team"
 ---

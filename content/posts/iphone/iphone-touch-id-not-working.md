@@ -1,8 +1,8 @@
 ---
 title: "Touch ID Not Working on iPhone? 9 Ways to Fix Fingerprint Sensor"
 description: "Is Touch ID not recognizing your fingerprint or failing to unlock? Fix iPhone Touch ID issues with our complete troubleshooting guide."
-date: "2024-11-01"
-publishDate: "2024-11-06"
+date: "2025-11-01"
+publishDate: "2025-11-06"
 keywords: ["Touch ID not working", "iPhone fingerprint sensor", "Touch ID failed", "fix Touch ID", "fingerprint not recognized"]
 author: "iFixGuide Team"
 ---

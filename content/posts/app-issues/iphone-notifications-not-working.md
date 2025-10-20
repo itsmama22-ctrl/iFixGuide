@@ -1,8 +1,8 @@
 ---
 title: "iPhone Notifications Not Working? 12 Ways to Fix Missing Alerts"
 description: "Not getting notifications on iPhone? Fix missing alerts, silent notifications, and notification issues with our complete guide."
-date: "2024-11-21"
-publishDate: "2024-11-21"
+date: "2025-11-21"
+publishDate: "2025-11-21"
 keywords: ["iPhone notifications not working", "not getting notifications", "iPhone alerts not showing", "fix notifications", "silent notifications iPhone"]
 author: "iFixGuide Team"
 ---

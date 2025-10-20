@@ -1,8 +1,8 @@
 ---
 title: "iPhone Storage Full? 15 Ways to Free Up Space Quickly"
 description: "Learn how to free up iPhone storage with our comprehensive guide. Discover hidden storage hogs and get your iPhone running smoothly again."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone storage full", "free up iPhone space", "iPhone storage management", "clear iPhone storage", "not enough storage"]
 author: "iFixGuide Team"
 ---

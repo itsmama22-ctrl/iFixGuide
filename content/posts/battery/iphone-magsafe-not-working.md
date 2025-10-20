@@ -1,8 +1,8 @@
 ---
 title: "MagSafe Not Working on iPhone? 9 Ways to Fix Wireless Charging"
 description: "MagSafe charger not working or charging slowly? Fix iPhone MagSafe issues with our complete troubleshooting guide for wireless charging problems."
-date: "2024-11-15"
-publishDate: "2024-11-15"
+date: "2025-11-15"
+publishDate: "2025-11-15"
 keywords: ["MagSafe not working", "MagSafe not charging", "iPhone wireless charging issues", "fix MagSafe", "MagSafe slow charging"]
 author: "iFixGuide Team"
 ---

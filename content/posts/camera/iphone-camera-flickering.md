@@ -1,8 +1,8 @@
 ---
 title: "iPhone Camera Flickering? 8 Ways to Fix Flashing Screen Issue"
 description: "Is your iPhone camera screen flickering or flashing? Fix the annoying camera flicker issue with our proven troubleshooting guide."
-date: "2024-10-19"
-publishDate: "2024-10-19"
+date: "2025-10-19"
+publishDate: "2025-10-19"
 keywords: ["iPhone camera flickering", "camera screen flashing", "camera flicker fix", "iPhone camera blinking", "camera strobe effect"]
 author: "iFixGuide Team"
 ---

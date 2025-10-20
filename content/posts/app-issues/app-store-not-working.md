@@ -1,8 +1,8 @@
 ---
 title: "App Store Not Working? 12 Fixes for Download and Update Issues"
 description: "Can't download apps or the App Store won't load? Fix App Store issues with our complete troubleshooting guide for iPhone."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["App Store not working", "can't download apps iPhone", "App Store won't load", "fix App Store", "apps won't update"]
 author: "iFixGuide Team"
 ---

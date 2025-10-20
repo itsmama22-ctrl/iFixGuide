@@ -1,8 +1,8 @@
 ---
 title: "iPhone Won't Connect to WiFi? 14 Solutions That Actually Work"
 description: "Fix iPhone WiFi problems with our comprehensive troubleshooting guide. Learn why your iPhone won't connect to WiFi and how to solve it quickly."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone WiFi not working", "iPhone won't connect to WiFi", "WiFi greyed out iPhone", "iPhone WiFi problems", "fix iPhone WiFi"]
 author: "iFixGuide Team"
 ---

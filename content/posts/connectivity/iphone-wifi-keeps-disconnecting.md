@@ -1,8 +1,8 @@
 ---
 title: "iPhone WiFi Keeps Disconnecting? 10 Fixes That Work"
 description: "Does your iPhone WiFi keep dropping or disconnecting randomly? Fix unstable WiFi connections with our complete troubleshooting guide."
-date: "2024-11-18"
-publishDate: "2024-11-18"
+date: "2025-11-18"
+publishDate: "2025-11-18"
 keywords: ["iPhone WiFi keeps disconnecting", "WiFi dropping iPhone", "unstable WiFi connection", "WiFi disconnects randomly", "fix WiFi dropping"]
 author: "iFixGuide Team"
 ---

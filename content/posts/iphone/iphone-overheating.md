@@ -1,8 +1,8 @@
 ---
 title: "iPhone Overheating? 12 Ways to Cool Down Your Device"
 description: "Learn why your iPhone gets hot and how to fix overheating issues. Discover proven solutions to prevent damage and improve performance."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone overheating", "iPhone getting hot", "iPhone temperature warning", "why is my iPhone hot", "cool down iPhone"]
 author: "iFixGuide Team"
 ---

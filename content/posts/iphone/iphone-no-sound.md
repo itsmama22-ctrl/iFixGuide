@@ -1,8 +1,8 @@
 ---
 title: "iPhone Has No Sound? 10 Ways to Fix Audio Problems"
 description: "Fix iPhone sound issues with our comprehensive guide. Learn why your iPhone has no sound during calls, videos, or music and how to solve it."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone no sound", "iPhone volume not working", "iPhone speaker not working", "no audio iPhone", "fix iPhone sound"]
 author: "iFixGuide Team"
 ---

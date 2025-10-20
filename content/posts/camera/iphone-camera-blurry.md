@@ -1,8 +1,8 @@
 ---
 title: "iPhone Camera Blurry? 10 Ways to Fix Blurry Photos and Videos"
 description: "Fix blurry iPhone camera issues with our step-by-step guide. Learn why your iPhone takes blurry pictures and how to get crystal-clear photos again."
-date: "2024-10-13"
-publishDate: "2024-10-13"
+date: "2025-10-13"
+publishDate: "2025-10-13"
 keywords: ["iPhone camera blurry", "blurry iPhone photos", "iPhone camera out of focus", "fix blurry camera", "iPhone camera not focusing"]
 author: "iFixGuide Team"
 ---
