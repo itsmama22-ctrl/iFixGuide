@@ -1,5 +1,7 @@
 # iFixGuide - iPhone & iOS Troubleshooting Guides
 
+<!-- Updated: All dates corrected to 2024 for realistic publishing schedule -->
+
 Expert troubleshooting guides for iPhone and iOS problems. Built with Next.js 14 for optimal performance and SEO.
 
 ## 🚀 Features
