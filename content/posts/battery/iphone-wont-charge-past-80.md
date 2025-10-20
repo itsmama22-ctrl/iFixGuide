@@ -1,8 +1,8 @@
 ---
 title: "iPhone Won't Charge Past 80%? Here's Why and How to Fix It"
 description: "Is your iPhone stuck at 80% charge? Learn about Optimized Battery Charging and how to charge to 100% when you need to."
-date: "2025-10-16"
-publishDate: "2025-10-16"
+date: "2024-10-16"
+publishDate: "2024-10-16"
 keywords: ["iPhone stuck at 80", "won't charge past 80", "iPhone charging stops at 80", "optimized battery charging", "charge to 100"]
 author: "iFixGuide Team"
 ---

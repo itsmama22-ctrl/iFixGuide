@@ -44,7 +44,7 @@ iFixGuide/
 │   ├── GuideCard.tsx            # Guide card component
 │   ├── Hero.tsx                 # Hero section
 │   ├── Navbar.tsx               # Navigation bar
-│   ├── PostCard.tsx             # Post card
+│   ├── GuideCard.tsx             # Post card
 │   └── RelatedPosts.tsx         # Related posts
 │
 ├── lib/                          # Utilities & Logic

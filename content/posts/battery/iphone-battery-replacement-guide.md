@@ -1,8 +1,8 @@
 ---
 title: "iPhone Battery Replacement: Cost, Signs, and Complete Guide 2025"
 description: "Everything about iPhone battery replacement: when to replace, costs, where to get it done, and what to expect. Official Apple vs third-party options compared."
-date: "2025-10-19"
-publishDate: "2025-10-19"
+date: "2024-10-19"
+publishDate: "2024-10-19"
 keywords: ["iPhone battery replacement cost", "when to replace iPhone battery", "Apple battery replacement", "iPhone battery service", "battery replacement near me"]
 author: "iFixGuide Team"
 ---

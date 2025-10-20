@@ -1,8 +1,8 @@
 ---
 title: "iPhone Camera Won't Focus? 8 Ways to Fix Auto-Focus Issues"
 description: "Is your iPhone camera not focusing properly? Fix autofocus problems and get sharp photos again with our complete troubleshooting guide."
-date: "2025-11-04"
-publishDate: "2025-11-04"
+date: "2024-11-04"
+publishDate: "2024-11-04"
 keywords: ["iPhone camera won't focus", "camera not focusing", "autofocus not working", "fix camera focus", "blurry camera iPhone"]
 author: "iFixGuide Team"
 ---

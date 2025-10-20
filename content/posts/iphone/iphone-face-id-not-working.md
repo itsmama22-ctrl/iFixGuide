@@ -1,8 +1,8 @@
 ---
 title: "Face ID Not Working on iPhone? 11 Fixes That Actually Work"
 description: "Face ID won't unlock your iPhone? Fix Face ID recognition problems, setup errors, and authentication issues with our complete troubleshooting guide."
-date: "2025-10-29"
-publishDate: "2025-10-29"
+date: "2024-10-29"
+publishDate: "2024-10-29"
 keywords: ["Face ID not working", "Face ID unavailable", "iPhone Face ID problems", "fix Face ID", "Face ID not recognizing face"]
 author: "iFixGuide Team"
 ---

@@ -1,8 +1,8 @@
 ---
 title: "iPhone Water Damage? What to Do and How to Fix It"
 description: "Dropped your iPhone in water? Learn the critical steps to take immediately, how to dry your iPhone properly, and when it can be saved."
-date: "2025-10-23"
-publishDate: "2025-10-23"
+date: "2024-10-23"
+publishDate: "2024-11-08"
 keywords: ["iPhone water damage", "iPhone dropped in water", "wet iPhone fix", "iPhone liquid damage", "save wet iPhone"]
 author: "iFixGuide Team"
 ---

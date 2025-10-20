@@ -40,9 +40,9 @@ iFixGuide/
 │   ├── Navbar.tsx
 │   ├── Footer.tsx
 │   ├── Breadcrumbs.tsx
-│   ├── PostCard.tsx
+│   ├── GuideCard.tsx
 │   ├── RelatedPosts.tsx
-│   ├── FAQ.tsx
+│   ├── FadeIn.tsx
 │   └── ContactForm.tsx
 ├── content/posts/              # Markdown blog posts
 │   ├── iphone/
@@ -51,12 +51,15 @@ iFixGuide/
 │   ├── camera/
 │   ├── app-issues/
 │   └── ios-updates/
-├── utils/                      # Utility functions
+├── lib/                        # Library functions
 │   ├── seo.ts                 # SEO helpers
 │   ├── analytics.ts           # Analytics functions
-│   └── posts.ts               # Post management
+│   ├── posts.ts               # Post management
+│   ├── categories.ts          # Category definitions
+│   ├── constants.ts           # Site constants
+│   └── images.ts              # Image management
 ├── public/images/             # Static images
-└── styles/global.css          # Global styles
+└── app/globals.css           # Global styles
 ```
 
 ## 🛠️ Installation

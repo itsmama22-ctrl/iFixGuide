@@ -1,8 +1,8 @@
 ---
 title: "iPhone Volume Buttons Not Working? 9 Quick Fixes"
 description: "Volume buttons stuck, broken, or unresponsive? Fix iPhone volume button issues with our troubleshooting guide."
-date: "2025-12-09"
-publishDate: "2025-12-09"
+date: "2024-12-09"
+publishDate: "2024-10-27"
 keywords: ["iPhone volume buttons not working", "volume button stuck", "side buttons broken", "fix volume buttons", "volume control not working"]
 author: "iFixGuide Team"
 ---

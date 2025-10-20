@@ -1,8 +1,8 @@
 ---
 title: "iPhone Live Photos Not Working? 8 Ways to Fix It"
 description: "Can't capture Live Photos or playback not working? Fix iPhone Live Photos issues with our troubleshooting guide."
-date: "2025-11-20"
-publishDate: "2025-11-20"
+date: "2024-11-20"
+publishDate: "2024-11-20"
 keywords: ["Live Photos not working", "iPhone Live Photos fix", "Live Photos won't play", "capture Live Photos", "Live Photos disabled"]
 author: "iFixGuide Team"
 ---

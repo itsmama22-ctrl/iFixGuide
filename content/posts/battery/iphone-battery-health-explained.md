@@ -1,8 +1,8 @@
 ---
 title: "iPhone Battery Health Explained: What the Percentage Really Means"
 description: "Understand iPhone Battery Health, what the percentage means, when to worry, and how to maintain maximum capacity for longer battery life."
-date: "2025-10-26"
-publishDate: "2025-10-26"
+date: "2024-10-26"
+publishDate: "2024-10-26"
 keywords: ["iPhone battery health", "battery maximum capacity", "iPhone battery percentage", "battery health 85%", "when to replace iPhone battery"]
 author: "iFixGuide Team"
 ---

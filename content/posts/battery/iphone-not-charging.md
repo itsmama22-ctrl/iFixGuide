@@ -1,8 +1,8 @@
 ---
 title: "iPhone Not Charging? 15 Fixes for Charging Problems"
 description: "Is your iPhone not charging when plugged in? Discover 15 proven solutions to fix charging issues, from simple cleaning to advanced troubleshooting."
-date: "2025-10-13"
-publishDate: "2025-10-13"
+date: "2024-10-13"
+publishDate: "2024-10-13"
 keywords: ["iPhone not charging", "iPhone won't charge", "iPhone charging port not working", "iPhone charging slowly", "fix iPhone charging"]
 author: "iFixGuide Team"
 ---

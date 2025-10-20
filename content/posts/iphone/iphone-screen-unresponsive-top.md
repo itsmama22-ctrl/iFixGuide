@@ -2,7 +2,7 @@
 title: "iPhone Screen Not Responding at Top? Fix Dead Zone Issues"
 description: "Top of iPhone screen not responding to touch? Fix dead zones and unresponsive screen areas with our guide."
 date: "2026-01-05"
-publishDate: "2026-01-05"
+publishDate: "2024-11-02"
 keywords: ["iPhone screen dead zone", "top of screen not working", "screen unresponsive area", "fix dead screen zone", "touch not working top"]
 author: "iFixGuide Team"
 ---

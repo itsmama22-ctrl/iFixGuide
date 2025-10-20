@@ -1,8 +1,8 @@
 ---
 title: "AirPods Won't Connect to iPhone? 12 Quick Fixes That Work"
 description: "Can't connect AirPods to iPhone? Fix connection issues, pairing problems, and audio cutting out with our complete AirPods troubleshooting guide."
-date: "2025-11-08"
-publishDate: "2025-11-08"
+date: "2024-11-08"
+publishDate: "2024-11-08"
 keywords: ["AirPods won't connect", "AirPods not connecting iPhone", "fix AirPods connection", "AirPods pairing issues", "AirPods disconnecting"]
 author: "iFixGuide Team"
 ---

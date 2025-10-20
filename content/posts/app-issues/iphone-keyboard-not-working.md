@@ -1,8 +1,8 @@
 ---
 title: "iPhone Keyboard Not Working? 10 Fixes for Typing Problems"
 description: "Is your iPhone keyboard not appearing, typing wrong letters, or lagging? Fix all keyboard issues with our troubleshooting guide."
-date: "2025-11-22"
-publishDate: "2025-11-22"
+date: "2024-11-22"
+publishDate: "2024-11-22"
 keywords: ["iPhone keyboard not working", "keyboard won't appear", "typing problems iPhone", "keyboard lagging", "fix iPhone keyboard"]
 author: "iFixGuide Team"
 ---

@@ -43,7 +43,7 @@ iFixGuide/
 │   ├── RelatedPosts.tsx    # Related posts
 │   ├── ContactForm.tsx     # Contact form
 │   ├── FAQ.tsx             # FAQ component
-│   ├── PostCard.tsx        # Post card
+│   ├── GuideCard.tsx        # Post card
 │   ├── FadeIn.tsx          # Animation wrapper
 │   └── BeautifulPostHeader.tsx # Post header
 │

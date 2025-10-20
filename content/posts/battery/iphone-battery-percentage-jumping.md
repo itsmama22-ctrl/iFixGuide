@@ -1,8 +1,8 @@
 ---
 title: "iPhone Battery Percentage Jumping? How to Fix Incorrect Battery"
 description: "Is your iPhone battery percentage jumping randomly or showing wrong percentage? Fix battery calibration issues with our troubleshooting guide."
-date: "2025-11-03"
-publishDate: "2025-11-03"
+date: "2024-11-03"
+publishDate: "2024-11-03"
 keywords: ["iPhone battery percentage jumping", "battery percentage wrong", "iPhone battery glitch", "calibrate iPhone battery", "fix battery percentage"]
 author: "iFixGuide Team"
 ---

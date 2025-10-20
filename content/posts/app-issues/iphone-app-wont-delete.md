@@ -1,8 +1,8 @@
 ---
 title: "Can't Delete Apps on iPhone? 7 Fixes for Stuck Apps"
 description: "iPhone app won't delete or keeps coming back? Fix app deletion issues and remove stubborn apps with our troubleshooting guide."
-date: "2025-11-11"
-publishDate: "2025-11-11"
+date: "2024-11-11"
+publishDate: "2024-11-11"
 keywords: ["can't delete app iPhone", "app won't delete", "iPhone app stuck", "remove app iPhone", "delete app not working"]
 author: "iFixGuide Team"
 ---

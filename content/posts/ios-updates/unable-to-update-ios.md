@@ -1,8 +1,8 @@
 ---
 title: "Unable to Install iOS Update? 10 Ways to Fix Update Errors"
 description: "Can't install iOS update? Fix 'Unable to Install Update' errors and download failures with our complete troubleshooting guide."
-date: "2025-10-28"
-publishDate: "2025-10-28"
+date: "2024-10-28"
+publishDate: "2024-10-28"
 keywords: ["unable to install iOS update", "iOS update failed", "can't update iPhone", "iOS installation error", "update won't download"]
 author: "iFixGuide Team"
 ---

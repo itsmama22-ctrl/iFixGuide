@@ -1,8 +1,8 @@
 ---
 title: "iPhone Stuck in Restart Loop? 9 Ways to Fix Continuous Restarting"
 description: "Is your iPhone restarting over and over? Fix the dreaded boot loop with our proven solutions. Stop continuous restarts and get your iPhone working again."
-date: "2025-10-17"
-publishDate: "2025-10-17"
+date: "2024-10-17"
+publishDate: "2024-10-17"
 keywords: ["iPhone restart loop", "iPhone keeps restarting", "boot loop iPhone", "continuous restart", "iPhone reboot loop fix"]
 author: "iFixGuide Team"
 ---

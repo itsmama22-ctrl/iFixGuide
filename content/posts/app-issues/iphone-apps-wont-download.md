@@ -1,8 +1,8 @@
 ---
 title: "iPhone Apps Won't Download? 13 Fixes for Stuck Downloads"
 description: "Can't download apps on iPhone? Fix stuck downloads, waiting apps, and App Store problems with our comprehensive troubleshooting guide."
-date: "2025-10-21"
-publishDate: "2025-10-21"
+date: "2024-10-21"
+publishDate: "2024-10-21"
 keywords: ["iPhone apps won't download", "apps stuck downloading", "waiting app download", "can't download apps", "App Store download failed"]
 author: "iFixGuide Team"
 ---

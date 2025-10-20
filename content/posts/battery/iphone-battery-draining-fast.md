@@ -1,8 +1,8 @@
 ---
 title: "iPhone Battery Draining Fast? 15 Proven Ways to Fix It"
 description: "Discover why your iPhone battery is draining so quickly and learn 15 effective solutions to extend battery life and improve performance."
-date: "2025-10-13"
-publishDate: "2025-10-13"
+date: "2024-10-13"
+publishDate: "2024-10-13"
 keywords: ["iPhone battery draining fast", "iPhone battery life", "improve iPhone battery", "battery drain iOS", "fix battery problems"]
 author: "iFixGuide Team"
 ---

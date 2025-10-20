@@ -1,8 +1,8 @@
 ---
 title: "iPhone Camera Black Screen? 12 Ways to Fix It"
 description: "Is your iPhone camera showing a black screen? Learn why this happens and discover 12 proven solutions to get your camera working again."
-date: "2025-10-13"
-publishDate: "2025-10-13"
+date: "2024-10-13"
+publishDate: "2024-10-13"
 keywords: ["iPhone camera black screen", "iPhone camera not working", "camera shows black", "iPhone camera won't open", "fix black camera screen"]
 author: "iFixGuide Team"
 ---
