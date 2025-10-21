@@ -10,19 +10,19 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 pt-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50 pt-10">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 to-purple-100/20"></div>
         </div>
         
-        <div className="container-custom relative z-10 py-12 md:py-20">
+        <div className="container-custom relative z-10 py-8 md:py-12">
           <div className="text-center max-w-4xl mx-auto px-4">
-              <div className="inline-flex items-center px-3 py-2 rounded-full text-xs md:text-sm font-semibold bg-blue-100 text-blue-800 mb-4 md:mb-6">
+              <div className="inline-flex items-center px-3 py-2 rounded-full text-xs md:text-sm font-semibold bg-blue-100 text-blue-800 mb-3 md:mb-4">
                 <span className="mr-2">🛠️</span>
                 Professional iPhone & iOS Troubleshooting
               </div>
               
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
                 Fix Your
                 <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   iPhone Issues
@@ -30,7 +30,7 @@ export default function HomePage() {
                 <span className="block">Like a Pro</span>
               </h1>
               
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-4 md:mb-6 max-w-3xl mx-auto leading-relaxed">
                 Step-by-step guides to solve any iPhone or iOS problem. From battery issues to app crashes, 
                 we've got you covered with professional solutions.
               </p>
@@ -56,22 +56,22 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-8 md:py-10 bg-white">
         <div className="container-custom px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
-              <div className="p-4 md:p-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+              <div className="p-3 md:p-4">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{posts.length}+</div>
                 <div className="text-sm md:text-base text-gray-600 font-medium">Expert Guides</div>
               </div>
-              <div className="p-4 md:p-6">
+              <div className="p-3 md:p-4">
                 <div className="text-3xl md:text-4xl font-bold text-green-600 mb-2">6</div>
                 <div className="text-sm md:text-base text-gray-600 font-medium">Categories</div>
               </div>
-              <div className="p-4 md:p-6">
+              <div className="p-3 md:p-4">
                 <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">100%</div>
                 <div className="text-sm md:text-base text-gray-600 font-medium">Free Solutions</div>
               </div>
-              <div className="p-4 md:p-6">
+              <div className="p-3 md:p-4">
                 <div className="text-3xl md:text-4xl font-bold text-orange-600 mb-2">24/7</div>
                 <div className="text-sm md:text-base text-gray-600 font-medium">Available</div>
               </div>
@@ -81,10 +81,10 @@ export default function HomePage() {
 
 
       {/* Featured Posts Section */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-8 md:py-12 bg-white">
         <div className="container-custom px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
               Latest
               <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Expert Guides
@@ -110,7 +110,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center mt-8 md:mt-12">
+          <div className="text-center mt-6 md:mt-8">
             <Link 
               href="/troubleshooting"
               className="btn-primary text-base md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -123,13 +123,13 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+      <section className="py-8 md:py-12 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
         <div className="container-custom px-4">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
               Can't Find Your Solution?
             </h2>
-            <p className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">
+            <p className="text-base md:text-lg lg:text-xl mb-4 md:mb-6 opacity-90">
               Contact our expert team for personalized help with your specific iPhone or iOS issue
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
