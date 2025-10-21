@@ -36,14 +36,14 @@ export default function Navbar() {
         : 'bg-transparent'
     }`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-12">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300">
               <span>🛠️</span>
             </div>
             <div className="hidden sm:block">
-              <div className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+              <div className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                 iFixGuide
               </div>
               <div className="text-xs text-gray-500 -mt-1">
