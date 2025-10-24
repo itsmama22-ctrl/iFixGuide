@@ -31,6 +31,7 @@ export default function TroubleshootingIndex() {
               title={post.title}
               description={post.description}
               date={post.date}
+              publishDate={post.publishDate}
               category={post.category}
               slug={post.slug}
               image={post.image}

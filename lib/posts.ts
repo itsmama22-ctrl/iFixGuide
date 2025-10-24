@@ -66,9 +66,9 @@ export function getAllPosts(): Post[] {
     return publishDate <= currentDateUTC
   })
 
-  // Sort by date descending
+  // Sort by publishDate descending
   return publishedPosts.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime()
+    return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
   })
 }
 
@@ -160,9 +160,9 @@ export function getAllPostsIncludingScheduled(): Post[] {
     allPosts.push(...posts)
   })
 
-  // Sort by date descending (no filtering for scheduled posts)
+  // Sort by publishDate descending (no filtering for scheduled posts)
   return allPosts.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime()
+    return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
   })
 }
 

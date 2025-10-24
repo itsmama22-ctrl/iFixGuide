@@ -9,6 +9,7 @@ interface GuideCardProps {
   title: string
   description: string
   date: string
+  publishDate?: string
   category: string
   slug: string
   image: string
@@ -19,6 +20,7 @@ export default function GuideCard({
   title,
   description,
   date,
+  publishDate,
   category,
   slug,
   image,
@@ -126,11 +128,11 @@ export default function GuideCard({
         
         {/* Footer */}
         <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <time className="text-sm text-gray-500 font-medium flex items-center" dateTime={date}>
+          <time className="text-sm text-gray-500 font-medium flex items-center" dateTime={publishDate || date}>
             <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
-            {format(new Date(date), 'MMM dd, yyyy')}
+            {format(new Date(publishDate || date), 'MMM dd, yyyy')}
           </time>
           <Link
             href={`/troubleshooting/${category}/${slug}`}
