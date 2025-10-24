@@ -177,3 +177,4 @@ export function searchPosts(query: string): Post[] {
   )
 }
 
+// Build timestamp: Fri Oct 24 19:44:51 +01 2025
