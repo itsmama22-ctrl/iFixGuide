@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { format } from 'date-fns'
 import { motion } from 'framer-motion'
+import { getImageForPost } from '@/lib/images'
 
 interface GuideCardProps {
   title: string
@@ -77,7 +78,8 @@ export default function GuideCard({
     'ios-updates': '⚙️'
   }
 
-  const imageUrl = image && image.startsWith('http') ? image : getCategoryImage(category)
+  // Use the new image system with Apple product images
+  const imageUrl = image && image.startsWith('http') ? image : getImageForPost(category, slug)
 
   return (
     <article className="card overflow-hidden h-full flex flex-col group">
@@ -86,7 +88,7 @@ export default function GuideCard({
           {/* Real Image */}
           <Image
             src={imageUrl}
-            alt={title}
+            alt={`${title} - Photo by iFixGuide.com via Unsplash`}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
