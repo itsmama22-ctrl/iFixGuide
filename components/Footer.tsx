@@ -151,7 +151,7 @@ export default function Footer() {
               © {currentYear} iFixGuide. All rights reserved. Professional iPhone troubleshooting solutions.
             </div>
             
-            <div className="flex items-center space-x-6 text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
               <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">
                 Privacy
               </Link>
@@ -163,7 +163,7 @@ export default function Footer() {
               </Link>
               <a 
                 href="mailto:contact.ifixguide@gmail.com" 
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors break-all"
               >
                 contact.ifixguide@gmail.com
               </a>
