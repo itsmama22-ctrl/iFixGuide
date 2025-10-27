@@ -48,7 +48,7 @@ export function getAllPosts(): Post[] {
           publishDate: data.publishDate || data.date,
           category,
           keywords: data.keywords || [],
-          image: data.image || getImageForPost(category, slug),
+          image: data.image || data.featured_image || getImageForPost(category, slug),
           content,
           readTime: Math.ceil(content.split(/\s+/).length / 200), // Approximate reading time
           author: data.author || 'iFixGuide Team',
@@ -150,7 +150,7 @@ export function getAllPostsIncludingScheduled(): Post[] {
           publishDate: data.publishDate || data.date,
           category,
           keywords: data.keywords || [],
-          image: data.image || getImageForPost(category, slug),
+          image: data.image || data.featured_image || getImageForPost(category, slug),
           content,
           readTime: Math.ceil(content.split(/\s+/).length / 200),
           author: data.author || 'iFixGuide Team',

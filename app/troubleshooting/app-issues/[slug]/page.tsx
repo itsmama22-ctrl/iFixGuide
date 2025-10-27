@@ -38,7 +38,7 @@ export default async function iPhonePostPage({ params }: { params: { slug: strin
 
   // Get category info
   const categoryInfo = getCategoryById(post.category)
-  const postImage = getImageForPost(post.category, post.slug)
+  const postImage = post.image
 
   // Convert markdown to HTML
   const contentHtml = marked(post.content)
