@@ -6,7 +6,7 @@ publishDate: "2026-07-20"
 keywords: ["MacBook Air M4 screen not responding", "MacBook touch screen issues", "MacBook Air M4 display problems", "MacBook screen unresponsive", "MacBook Air M4 touch"]
 author: "iFixGuide Team"
 category: "iphone"
-featured_image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 readTime: 7
 ---
 

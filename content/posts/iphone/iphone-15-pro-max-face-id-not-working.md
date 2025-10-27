@@ -6,7 +6,7 @@ publishDate: "2026-03-06"
 keywords: ["iPhone 15 Pro Max Face ID not working", "iPhone 15 Face ID issues", "iPhone Face ID not recognizing", "iPhone 15 Pro Max Face ID fix", "iPhone biometric problems"]
 author: "iFixGuide Team"
 category: "iphone"
-featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 # iPhone 15 Pro Max Face ID Not Working? 9 Proven Solutions

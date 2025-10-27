@@ -6,7 +6,7 @@ publishDate: "2025-10-13"
 keywords: ["iPhone WiFi not working", "iPhone won't connect to WiFi", "WiFi greyed out iPhone", "iPhone WiFi problems", "fix iPhone WiFi"]
 author: "iFixGuide Team"
 category: "connectivity"
-featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4219861/pexels-photo-4219861.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Few things are more frustrating than an iPhone that won't connect to WiFi. Whether you're getting "incorrect password" errors, seeing a greyed-out WiFi option, or constantly disconnecting, this guide covers all the solutions you need.

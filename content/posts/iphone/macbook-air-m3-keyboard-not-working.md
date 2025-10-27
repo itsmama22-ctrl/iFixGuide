@@ -6,7 +6,7 @@ publishDate: "2026-03-21"
 keywords: ["MacBook Air M3 keyboard not working", "MacBook keyboard issues", "M3 MacBook keys not working", "MacBook Air keyboard fix", "MacBook keyboard repair"]
 author: "iFixGuide Team"
 category: "laptop"
-featured_image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 # MacBook Air M3 Keyboard Not Working? 8 Essential Fixes

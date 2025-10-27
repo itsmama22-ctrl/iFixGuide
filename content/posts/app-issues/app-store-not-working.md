@@ -6,7 +6,7 @@ publishDate: "2025-10-13"
 keywords: ["App Store not working", "can't download apps iPhone", "App Store won't load", "fix App Store", "apps won't update"]
 author: "iFixGuide Team"
 category: "app-issues"
-featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 When the App Store stops working, you can't download new apps or update existing ones. Whether the App Store won't load, downloads are stuck, or you're getting error messages, this guide has the solutions you need.

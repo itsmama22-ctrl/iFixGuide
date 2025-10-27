@@ -6,7 +6,7 @@ publishDate: "2025-11-05"
 keywords: ["iPhone app won't update", "app update stuck", "can't update apps", "app update pending", "fix app updates"]
 author: "iFixGuide Team"
 category: "app-issues"
-featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Apps stuck on "Update" or refusing to update is frustrating. This guide fixes all app update problems on iPhone.

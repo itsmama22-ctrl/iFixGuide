@@ -6,7 +6,7 @@ publishDate: "2026-02-04"
 keywords: ["AirPods Pro 2nd gen not charging", "AirPods Pro charging issues", "AirPods Pro case not charging", "AirPods Pro wireless charging", "AirPods Pro battery problems"]
 author: "iFixGuide Team"
 category: "smart-devices"
-featured_image: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 # AirPods Pro 2nd Gen Not Charging? 8 Quick Fixes

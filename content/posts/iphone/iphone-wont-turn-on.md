@@ -6,7 +6,7 @@ publishDate: "2025-10-14"
 keywords: ["iPhone won't turn on", "iPhone dead", "iPhone black screen", "iPhone not responding", "revive dead iPhone"]
 author: "iFixGuide Team"
 category: "iphone"
-featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 When your iPhone won't turn on, it can be alarming. Whether the screen stays black, you see the Apple logo but nothing else, or there's no sign of life at all, this guide will help you troubleshoot and fix the problem.

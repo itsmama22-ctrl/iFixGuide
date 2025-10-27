@@ -6,7 +6,7 @@ publishDate: "2026-07-30"
 keywords: ["iPhone 15 Pro Max microphone", "iPhone microphone not working", "iPhone mic issues", "iPhone 15 Pro Max audio", "iPhone microphone troubleshooting"]
 author: "iFixGuide Team"
 category: "iphone"
-featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 readTime: 7
 ---
 

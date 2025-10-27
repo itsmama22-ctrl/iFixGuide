@@ -6,7 +6,7 @@ publishDate: "2025-10-13"
 keywords: ["iPhone camera blurry", "blurry iPhone photos", "iPhone camera out of focus", "fix blurry camera", "iPhone camera not focusing"]
 author: "iFixGuide Team"
 category: "camera"
-featured_image: "https://images.unsplash.com/photo-1591290615322-cbd48abf7ae3?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Taking blurry photos is frustrating, especially when you're trying to capture important moments. If your iPhone camera won't focus or produces consistently blurry images, this comprehensive guide will help you identify and fix the problem.

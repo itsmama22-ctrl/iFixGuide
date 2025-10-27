@@ -6,7 +6,7 @@ publishDate: "2025-10-13"
 keywords: ["iPhone screen not responding", "iPhone touch screen frozen", "unresponsive iPhone screen", "iPhone screen won't work", "fix iPhone touch screen"]
 author: "iFixGuide Team"
 category: "iphone"
-featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 A frozen or unresponsive iPhone screen is one of the most frustrating issues you can encounter. Whether your screen won't respond to touches, is partially working, or completely frozen, this guide will help you fix the problem.

@@ -6,7 +6,7 @@ publishDate: "2025-10-19"
 keywords: ["iPhone battery replacement cost", "when to replace iPhone battery", "Apple battery replacement", "iPhone battery service", "battery replacement near me"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Knowing when and how to replace your iPhone battery can save money and extend your device's life. This complete guide covers everything you need to know about iPhone battery replacement in 2025.

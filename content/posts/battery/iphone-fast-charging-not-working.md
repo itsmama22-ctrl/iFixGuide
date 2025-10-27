@@ -6,7 +6,7 @@ publishDate: "2026-01-06"
 keywords: ["iPhone fast charging not working", "fast charge not working", "iPhone charges slowly", "enable fast charging", "20W charging not working"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Fast charging gets iPhone to 50% in 30 minutes. When not working, this guide fixes it.

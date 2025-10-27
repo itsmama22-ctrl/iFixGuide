@@ -6,7 +6,7 @@ publishDate: "2026-01-09"
 keywords: ["iPhone charging paused temperature", "charging on hold", "iPhone too hot to charge", "temperature warning charging", "fix charging paused"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 'Charging paused. iPhone needs to cool down' protects battery from heat damage. This guide gets charging resumed safely.

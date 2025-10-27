@@ -6,7 +6,7 @@ publishDate: "2025-11-12"
 keywords: ["Portrait mode not working", "iPhone Portrait mode fix", "background blur not working", "Portrait mode unavailable", "fix Portrait mode"]
 author: "iFixGuide Team"
 category: "camera"
-featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Portrait mode creates beautiful photos with blurred backgrounds. When it stops working or becomes unavailable, this guide has the solutions.

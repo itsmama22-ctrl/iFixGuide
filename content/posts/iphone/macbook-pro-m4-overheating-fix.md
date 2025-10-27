@@ -6,7 +6,7 @@ publishDate: "2026-01-30"
 keywords: ["MacBook Pro M4 overheating", "MacBook Pro cooling", "M4 MacBook thermal issues", "MacBook Pro temperature fix", "MacBook Pro fan problems"]
 author: "iFixGuide Team"
 category: "laptop"
-featured_image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 # MacBook Pro M4 Overheating? 9 Cooling Solutions That Work

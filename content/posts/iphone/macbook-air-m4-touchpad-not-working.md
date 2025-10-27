@@ -6,7 +6,7 @@ publishDate: "2026-03-01"
 keywords: ["MacBook Air M4 touchpad not working", "MacBook trackpad issues", "M4 MacBook touchpad fix", "MacBook Air trackpad problems", "MacBook touchpad repair"]
 author: "iFixGuide Team"
 category: "laptop"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 # MacBook Air M4 Touchpad Not Working? 8 Essential Fixes

@@ -6,7 +6,7 @@ publishDate: "2025-11-17"
 keywords: ["iPhone no service", "iPhone searching for service", "no signal iPhone", "fix no service", "iPhone cellular not working"]
 author: "iFixGuide Team"
 category: "connectivity"
-featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4219861/pexels-photo-4219861.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 "No Service" on iPhone means you can't make calls, text, or use cellular data. This guide fixes all signal issues.

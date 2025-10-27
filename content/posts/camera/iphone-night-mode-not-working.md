@@ -6,7 +6,7 @@ publishDate: "2025-11-19"
 keywords: ["iPhone Night mode not working", "Night mode unavailable", "low light photos iPhone", "fix Night mode", "dark photos iPhone"]
 author: "iFixGuide Team"
 category: "camera"
-featured_image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Night mode captures amazing low-light photos. When unavailable or not working, this guide fixes it.

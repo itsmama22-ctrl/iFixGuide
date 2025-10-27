@@ -6,7 +6,7 @@ publishDate: "2025-10-13"
 keywords: ["iPhone not charging", "iPhone won't charge", "iPhone charging port not working", "iPhone charging slowly", "fix iPhone charging"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 Few things are more frustrating than plugging in your iPhone only to find it's not charging. Whether it won't charge at all, charges slowly, or charges intermittently, this comprehensive guide covers all the fixes you need.

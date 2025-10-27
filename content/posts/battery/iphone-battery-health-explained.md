@@ -6,7 +6,7 @@ publishDate: "2025-10-26"
 keywords: ["iPhone battery health", "battery maximum capacity", "iPhone battery percentage", "battery health 85%", "when to replace iPhone battery"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 iPhone Battery Health tells you how much your battery has degraded. Understanding what the numbers mean helps you know when to replace your battery and how to maintain it.

@@ -6,7 +6,7 @@ publishDate: "2025-11-09"
 keywords: ["iPhone dies at 30%", "iPhone shuts down early", "unexpected shutdown", "iPhone battery dies fast", "phone dies with battery left"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 iPhone shutting down at 20%, 30%, or even 50% battery is frustrating and indicates battery problems. This guide explains why it happens and how to fix it.

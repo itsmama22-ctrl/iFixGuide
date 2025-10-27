@@ -6,7 +6,7 @@ publishDate: "2026-03-11"
 keywords: ["MacBook Pro M4 screen black", "MacBook Pro black screen", "M4 MacBook display not working", "MacBook Pro screen repair", "MacBook Pro display issues"]
 author: "iFixGuide Team"
 category: "laptop"
-featured_image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 # MacBook Pro M4 Screen Black? 10 Critical Fixes

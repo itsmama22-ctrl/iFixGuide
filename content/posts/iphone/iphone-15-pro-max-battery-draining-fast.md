@@ -6,7 +6,7 @@ publishDate: "2026-02-24"
 keywords: ["iPhone 15 Pro Max battery drain", "iPhone 15 battery not lasting", "iPhone 15 Pro Max battery fix", "iPhone battery optimization", "iPhone 15 battery problems"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
+featured_image: "https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=1200"
 ---
 
 # iPhone 15 Pro Max Battery Draining Fast? 12 Proven Fixes
