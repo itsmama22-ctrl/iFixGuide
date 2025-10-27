@@ -5,6 +5,8 @@ date: "2025-10-19"
 publishDate: "2025-10-19"
 keywords: ["iPhone camera flickering", "camera screen flashing", "camera flicker fix", "iPhone camera blinking", "camera strobe effect"]
 author: "iFixGuide Team"
+category: "camera"
+featured_image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&q=80"
 ---
 
 iPhone camera flickering or flashing makes it impossible to take photos. The screen blinks, flashes, or shows lines. This guide provides 8 solutions to fix camera flickering issues.

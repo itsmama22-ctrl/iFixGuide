@@ -5,6 +5,8 @@ date: "2026-01-02"
 publishDate: "2026-01-02"
 keywords: ["iPhone photo quality poor", "photos look bad", "grainy iPhone photos", "improve photo quality", "better iPhone photos"]
 author: "iFixGuide Team"
+category: "camera"
+featured_image: "https://images.unsplash.com/photo-1591290615322-cbd48abf7ae3?w=1200&q=80"
 ---
 
 iPhone takes amazing photos when configured properly. If your photos look bad, this guide improves quality.

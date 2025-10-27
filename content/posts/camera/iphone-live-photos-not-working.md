@@ -5,6 +5,8 @@ date: "2025-11-20"
 publishDate: "2025-11-20"
 keywords: ["Live Photos not working", "iPhone Live Photos fix", "Live Photos won't play", "capture Live Photos", "Live Photos disabled"]
 author: "iFixGuide Team"
+category: "camera"
+featured_image: "https://images.unsplash.com/photo-1591290615322-cbd48abf7ae3?w=1200&q=80"
 ---
 
 Live Photos add motion to photos. When not working, this guide fixes all issues.
