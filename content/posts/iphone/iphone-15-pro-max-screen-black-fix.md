@@ -6,7 +6,7 @@ publishDate: "2026-06-15"
 keywords: ["iPhone 15 Pro Max black screen", "iPhone screen black", "iPhone display not working", "iPhone black screen fix", "iPhone 15 Pro Max display issues"]
 author: "iFixGuide Team"
 category: "iphone"
-image: "/images/iphone-15-pro-max-black-screen.jpg"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 readTime: 8
 ---
 

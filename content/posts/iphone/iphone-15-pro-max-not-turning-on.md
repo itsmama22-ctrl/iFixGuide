@@ -6,7 +6,7 @@ publishDate: "2026-07-15"
 keywords: ["iPhone 15 Pro Max not turning on", "iPhone won't turn on", "iPhone black screen", "iPhone not starting", "iPhone 15 Pro Max dead"]
 author: "iFixGuide Team"
 category: "iphone"
-image: "/images/iphone-15-pro-max-not-turning-on.jpg"
+featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 readTime: 8
 ---
 

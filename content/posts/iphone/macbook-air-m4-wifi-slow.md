@@ -6,7 +6,7 @@ publishDate: "2026-06-30"
 keywords: ["MacBook Air M4 WiFi slow", "MacBook WiFi speed", "MacBook Air M4 internet slow", "WiFi optimization", "MacBook network issues"]
 author: "iFixGuide Team"
 category: "connectivity"
-image: "/images/macbook-air-m4-wifi-slow.jpg"
+featured_image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=1200&q=80"
 readTime: 8
 ---
 

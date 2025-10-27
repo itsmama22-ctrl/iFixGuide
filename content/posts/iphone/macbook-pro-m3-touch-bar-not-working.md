@@ -6,7 +6,7 @@ publishDate: "2026-06-20"
 keywords: ["MacBook Pro M3 Touch Bar", "Touch Bar not working", "MacBook Touch Bar fix", "Touch Bar troubleshooting", "MacBook Pro M3 display issues"]
 author: "iFixGuide Team"
 category: "iphone"
-image: "/images/macbook-pro-m3-touch-bar.jpg"
+featured_image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=1200&q=80"
 readTime: 7
 ---
 

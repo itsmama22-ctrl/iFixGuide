@@ -6,7 +6,7 @@ publishDate: "2026-07-05"
 keywords: ["iPhone 15 Pro Max apps crashing", "iPhone apps crashing", "iPhone app crashes", "iPhone 15 Pro Max app issues", "iPhone app troubleshooting"]
 author: "iFixGuide Team"
 category: "app-issues"
-image: "/images/iphone-15-pro-max-apps-crashing.jpg"
+featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
 readTime: 7
 ---
 

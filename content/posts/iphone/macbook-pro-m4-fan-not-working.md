@@ -6,7 +6,7 @@ publishDate: "2026-07-25"
 keywords: ["MacBook Pro M4 fan not working", "MacBook fan issues", "MacBook Pro M4 cooling", "MacBook fan troubleshooting", "MacBook Pro M4 overheating"]
 author: "iFixGuide Team"
 category: "iphone"
-image: "/images/macbook-pro-m4-fan-not-working.jpg"
+featured_image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=1200&q=80"
 readTime: 8
 ---
 

@@ -6,7 +6,7 @@ publishDate: "2026-06-25"
 keywords: ["iPhone 15 Pro Max volume buttons", "iPhone volume buttons not working", "iPhone volume control fix", "iPhone 15 Pro Max buttons", "iPhone volume button repair"]
 author: "iFixGuide Team"
 category: "iphone"
-image: "/images/iphone-15-pro-max-volume-buttons.jpg"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 readTime: 6
 ---
 

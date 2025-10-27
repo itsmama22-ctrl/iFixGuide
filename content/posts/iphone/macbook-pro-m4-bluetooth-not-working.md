@@ -6,7 +6,7 @@ publishDate: "2026-07-10"
 keywords: ["MacBook Pro M4 Bluetooth", "MacBook Bluetooth not working", "MacBook Pro M4 connectivity", "Bluetooth troubleshooting", "MacBook Pro M4 wireless"]
 author: "iFixGuide Team"
 category: "connectivity"
-image: "/images/macbook-pro-m4-bluetooth.jpg"
+featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 readTime: 7
 ---
 
