@@ -5,6 +5,8 @@ date: "2025-11-14"
 publishDate: "2025-11-01"
 keywords: ["iPhone screen flickering", "iPhone display flashing", "screen strobing iPhone", "fix flickering screen", "iPhone screen glitching"]
 author: "iFixGuide Team"
+category: "iphone"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 ---
 
 iPhone screen flickering or flashing makes your device unusable. This guide fixes all display flickering issues.

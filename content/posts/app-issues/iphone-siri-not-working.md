@@ -5,6 +5,8 @@ date: "2026-01-04"
 publishDate: "2026-01-04"
 keywords: ["Siri not working", "Hey Siri not responding", "Siri won't listen", "fix Siri iPhone", "Siri not hearing me"]
 author: "iFixGuide Team"
+category: "app-issues"
+featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
 ---
 
 Siri should respond to your voice commands. When not working, this guide fixes all Siri issues.

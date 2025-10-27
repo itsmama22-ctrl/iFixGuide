@@ -5,6 +5,8 @@ date: "2025-12-08"
 publishDate: "2025-10-26"
 keywords: ["iPhone volume buttons not working", "volume button stuck", "side buttons broken", "fix volume buttons", "volume control not working"]
 author: "iFixGuide Team"
+category: "iphone"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 ---
 
 Volume buttons essential for adjusting sound and taking screenshots. When they stop working, this guide has solutions.

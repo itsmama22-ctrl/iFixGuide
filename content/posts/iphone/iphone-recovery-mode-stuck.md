@@ -5,6 +5,8 @@ date: "2026-01-10"
 publishDate: "2025-10-30"
 keywords: ["iPhone stuck in recovery mode", "exit recovery mode", "iTunes logo stuck", "recovery mode loop", "fix recovery mode"]
 author: "iFixGuide Team"
+category: "iphone"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 ---
 
 iPhone stuck in recovery mode shows iTunes/computer icon. This guide gets your iPhone out of recovery mode.

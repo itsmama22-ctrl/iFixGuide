@@ -5,6 +5,8 @@ date: "2025-10-15"
 publishDate: "2025-10-15"
 keywords: ["iPhone cellular data not working", "mobile data not working", "iPhone no internet", "LTE not working iPhone", "5G not working"]
 author: "iFixGuide Team"
+category: "connectivity"
+featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 ---
 
 When your iPhone's cellular data stops working, you lose internet access when away from Wi-Fi. Whether you're seeing "No Service," data is extremely slow, or apps won't load, this guide provides 12 effective solutions.

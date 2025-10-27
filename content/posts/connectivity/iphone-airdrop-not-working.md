@@ -5,6 +5,8 @@ date: "2025-10-25"
 publishDate: "2025-10-25"
 keywords: ["AirDrop not working iPhone", "iPhone AirDrop problems", "can't AirDrop", "AirDrop not showing", "fix AirDrop"]
 author: "iFixGuide Team"
+category: "connectivity"
+featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 ---
 
 AirDrop makes sharing files between Apple devices effortless—when it works. If your iPhone won't AirDrop, can't see other devices, or transfers keep failing, this guide has the solutions.

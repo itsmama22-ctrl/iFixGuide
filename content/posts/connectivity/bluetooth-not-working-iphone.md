@@ -5,6 +5,8 @@ date: "2025-10-13"
 publishDate: "2025-10-13"
 keywords: ["iPhone Bluetooth not working", "iPhone won't pair Bluetooth", "Bluetooth connection problems iPhone", "fix Bluetooth iPhone", "Bluetooth keeps disconnecting"]
 author: "iFixGuide Team"
+category: "connectivity"
+featured_image: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=1200&q=80"
 ---
 
 Bluetooth issues on iPhone are incredibly frustrating, whether your devices won't pair, keep disconnecting, or audio cuts out. This comprehensive guide covers all the solutions you need to fix Bluetooth problems on your iPhone.

@@ -5,6 +5,8 @@ date: "2026-01-05"
 publishDate: "2025-11-02"
 keywords: ["iPhone screen dead zone", "top of screen not working", "screen unresponsive area", "fix dead screen zone", "touch not working top"]
 author: "iFixGuide Team"
+category: "iphone"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 ---
 
 Specific screen areas not responding indicates dead zones. This guide fixes partial screen unresponsiveness.

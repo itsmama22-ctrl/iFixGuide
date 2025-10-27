@@ -5,6 +5,8 @@ date: "2025-11-13"
 publishDate: "2025-11-07"
 keywords: ["iPhone vibration not working", "iPhone won't vibrate", "haptic feedback broken", "fix iPhone vibration", "vibrate not working"]
 author: "iFixGuide Team"
+category: "iphone"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 ---
 
 When iPhone vibration stops working, you miss calls and notifications. This guide fixes all vibration and haptic feedback issues.

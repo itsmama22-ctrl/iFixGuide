@@ -5,6 +5,8 @@ date: "2025-11-01"
 publishDate: "2025-11-06"
 keywords: ["Touch ID not working", "iPhone fingerprint sensor", "Touch ID failed", "fix Touch ID", "fingerprint not recognized"]
 author: "iFixGuide Team"
+category: "iphone"
+featured_image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80"
 ---
 
 Touch ID makes unlocking your iPhone and authorizing purchases quick and secure. When it stops working, you're stuck using your passcode. This guide fixes all Touch ID problems.

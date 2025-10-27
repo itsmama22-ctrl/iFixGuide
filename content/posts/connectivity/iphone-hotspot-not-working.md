@@ -5,6 +5,8 @@ date: "2025-10-18"
 publishDate: "2025-10-18"
 keywords: ["iPhone hotspot not working", "personal hotspot missing", "hotspot won't connect", "can't find hotspot", "iPhone tethering issues"]
 author: "iFixGuide Team"
+category: "connectivity"
+featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 ---
 
 iPhone Personal Hotspot lets you share cellular data with other devices. When it stops working, you lose this valuable feature. This guide fixes all common hotspot issues.

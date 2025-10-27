@@ -5,6 +5,8 @@ date: "2025-10-13"
 publishDate: "2025-10-13"
 keywords: ["iPhone battery draining fast", "iPhone battery life", "improve iPhone battery", "battery drain iOS", "fix battery problems"]
 author: "iFixGuide Team"
+category: "battery"
+featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
 ---
 
 Is your iPhone battery dying before the day ends? You're not alone. Battery drain is one of the most common iPhone complaints, but fortunately, there are many ways to fix it.

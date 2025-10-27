@@ -5,6 +5,8 @@ date: "2025-10-13"
 publishDate: "2025-10-13"
 keywords: ["iPhone storage full", "free up iPhone space", "iPhone storage management", "clear iPhone storage", "not enough storage"]
 author: "iFixGuide Team"
+category: "ios-updates"
+featured_image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&q=80"
 ---
 
 Getting the dreaded "iPhone Storage Full" message is frustrating. Whether you need space for photos, apps, or an iOS update, this guide shows you 15 effective ways to free up storage quickly.

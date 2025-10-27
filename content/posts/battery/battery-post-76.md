@@ -5,6 +5,8 @@ date: "2025-12-13"
 publishDate: "2025-12-13"
 keywords: ["iPhone charging port wet", "liquid detected iPhone", "charging port water", "dry charging port", "moisture detected"]
 author: "iFixGuide Team"
+category: "battery"
+featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
 ---
 
 'Liquid Detected in Lightning Connector' or 'Charging Not Available' warnings prevent charging. Here's how to fix it safely.

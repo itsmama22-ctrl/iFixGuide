@@ -5,6 +5,8 @@ date: "2025-10-16"
 publishDate: "2025-10-16"
 keywords: ["iPhone stuck at 80", "won't charge past 80", "iPhone charging stops at 80", "optimized battery charging", "charge to 100"]
 author: "iFixGuide Team"
+category: "battery"
+featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
 ---
 
 If your iPhone stops charging at 80% and won't go higher, don't worry—this is usually a feature, not a bug. This guide explains why it happens and how to charge to 100% when needed.

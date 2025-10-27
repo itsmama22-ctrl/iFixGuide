@@ -5,6 +5,8 @@ date: "2025-12-25"
 publishDate: "2025-12-25"
 keywords: ["iPhone Airplane Mode stuck", "can't turn off Airplane Mode", "Airplane Mode greyed out", "fix Airplane Mode", "toggle not working"]
 author: "iFixGuide Team"
+category: "connectivity"
+featured_image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80"
 ---
 
 Airplane Mode stuck ON prevents calls, texts, and internet. This guide fixes the issue.

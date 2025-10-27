@@ -5,6 +5,8 @@ date: "2025-11-21"
 publishDate: "2025-11-21"
 keywords: ["iPhone notifications not working", "not getting notifications", "iPhone alerts not showing", "fix notifications", "silent notifications iPhone"]
 author: "iFixGuide Team"
+category: "app-issues"
+featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
 ---
 
 Missing important notifications is frustrating. This guide fixes all iPhone notification problems.
