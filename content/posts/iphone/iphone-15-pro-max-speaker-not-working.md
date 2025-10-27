@@ -6,7 +6,7 @@ publishDate: "2026-02-14"
 keywords: ["iPhone 15 Pro Max speaker not working", "iPhone 15 speaker issues", "iPhone speaker no sound", "iPhone 15 Pro Max audio problems", "iPhone speaker repair"]
 author: "iFixGuide Team"
 category: "iphone"
-featured_image: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200"
+featured_image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80"
 ---
 
 # iPhone 15 Pro Max Speaker Not Working? 9 Essential Fixes

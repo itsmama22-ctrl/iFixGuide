@@ -6,7 +6,7 @@ publishDate: "2026-01-25"
 keywords: ["iPhone 15 Pro Max camera not working", "iPhone 15 camera issues", "iPhone camera won't open", "iPhone 15 Pro Max camera fix", "iPhone camera troubleshooting"]
 author: "iFixGuide Team"
 category: "camera"
-featured_image: "https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1200"
+featured_image: "https://images.unsplash.com/photo-1591290615322-cbd48abf7ae3?w=1200&q=80"
 ---
 
 # iPhone 15 Pro Max Camera Not Working? 11 Essential Fixes

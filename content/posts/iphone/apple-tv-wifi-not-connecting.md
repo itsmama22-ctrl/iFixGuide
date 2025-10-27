@@ -6,7 +6,7 @@ publishDate: "2026-01-15"
 keywords: ["Apple TV WiFi not working", "Apple TV won't connect", "Apple TV WiFi issues", "Apple TV network problems", "Apple TV troubleshooting"]
 author: "iFixGuide Team"
 category: "smart-devices"
-featured_image: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200"
+featured_image: "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&q=80"
 ---
 
 # Apple TV WiFi Not Connecting? 10 Quick Fixes That Work

@@ -6,7 +6,7 @@ publishDate: "2026-04-10"
 keywords: ["MacBook Air M4 not charging", "MacBook Air charging issues", "M4 MacBook battery problems", "MacBook Air charger not working", "MacBook Air power issues"]
 author: "iFixGuide Team"
 category: "battery"
-featured_image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
+featured_image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80"
 ---
 
 # MacBook Air M4 Not Charging? 9 Essential Fixes

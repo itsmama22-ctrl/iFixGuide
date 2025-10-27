@@ -6,7 +6,7 @@ publishDate: "2026-02-19"
 keywords: ["MacBook Pro M3 WiFi not working", "MacBook Pro WiFi issues", "M3 MacBook internet problems", "MacBook Pro WiFi fix", "MacBook Pro network troubleshooting"]
 author: "iFixGuide Team"
 category: "laptop"
-featured_image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1200"
+featured_image: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=1200&q=80"
 ---
 
 # MacBook Pro M3 WiFi Not Working? 10 Proven Solutions
