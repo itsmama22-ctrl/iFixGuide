@@ -1,8 +1,12 @@
 import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/posts'
 
+function getBaseUrl() {
+  return process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://ifixguide.com'
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ifixguide.vercel.app'
+  const baseUrl = getBaseUrl()
   const posts = getAllPosts()
 
   const postUrls = posts.map((post) => ({

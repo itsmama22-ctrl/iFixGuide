@@ -1,6 +1,12 @@
 import { MetadataRoute } from 'next'
 
+function getBaseHost() {
+  return process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://ifixguide.com'
+}
+
 export default function robots(): MetadataRoute.Robots {
+  const baseHost = getBaseHost()
+
   return {
     rules: [
       {
@@ -20,7 +26,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/_next/', '/admin/', '/private/'],
       },
     ],
-    sitemap: 'https://ifixguide.vercel.app/sitemap.xml',
-    host: 'https://ifixguide.vercel.app',
+    sitemap: `${baseHost}/sitemap.xml`,
+    host: baseHost,
   }
 }

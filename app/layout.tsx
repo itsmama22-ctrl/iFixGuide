@@ -3,8 +3,9 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Script from 'next/script'
 import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib/seo'
+import AnalyticsScripts from '@/components/AnalyticsScripts'
+import CookieConsent from '@/components/CookieConsent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -111,24 +112,8 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `}
-            </Script>
-          </>
-        )}
+        <AnalyticsScripts gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        <CookieConsent />
       </body>
     </html>
   )
