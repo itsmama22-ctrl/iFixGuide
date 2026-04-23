@@ -8,28 +8,24 @@ on:
 
 jobs:
   check-and-publish:
-    runs-on: ubuntu-latest 
-        env:
+    runs-on: ubuntu-latest
+    env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
-          
       - name: Install dependencies
         run: npm ci
-        
       - name: Check for scheduled posts
         id: check-posts
         run: |
           echo "🔍 Checking for posts scheduled for today and catching up any missed posts..."
           node scripts/check-scheduled-posts.js
-          
       - name: Trigger Vercel Deployment
         if: steps.check-posts.outputs.should_deploy == 'true'
         uses: amondnet/vercel-action@v25
@@ -38,7 +34,6 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           vercel-args: '--prod'
-          
       - name: Notify deployment status
         if: always()
         run: |
@@ -46,7 +41,6 @@ jobs:
             TODAY_COUNT="${{ steps.check-posts.outputs.today_posts }}"
             MISSED_COUNT="${{ steps.check-posts.outputs.missed_posts }}"
             TOTAL_COUNT="${{ steps.check-posts.outputs.posts_count }}"
-            
             echo "✅ Deployment triggered for $TOTAL_COUNT post(s)"
             if [ "$TODAY_COUNT" != "0" ]; then
               echo "  📅 Today's posts: $TODAY_COUNT"
