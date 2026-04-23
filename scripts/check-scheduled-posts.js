@@ -13,9 +13,9 @@ function checkScheduledPosts() {
   const todayStr = today.toISOString().split('T')[0]; // YYYY-MM-DD format
   const currentDate = new Date(todayStr + 'T00:00:00.000Z');
   
-  // Check posts from up to 7 days ago to catch any missed posts (prevents catching very old posts)
+  // Check posts from up to 14 days ago to catch any missed posts (prevents catching very old posts)
   const lookbackDate = new Date(currentDate);
-  lookbackDate.setDate(lookbackDate.getDate() - 7);
+  lookbackDate.setDate(lookbackDate.getDate() - 14);
   
   console.log(`🔍 Checking for posts scheduled from ${lookbackDate.toISOString().split('T')[0]} to ${todayStr}`);
   
